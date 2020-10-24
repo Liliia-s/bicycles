@@ -30,7 +30,7 @@
               <img src="img/logo.svg" alt="Логотип интернет-магазина велосипедов - Moon">
             </picture>
           </a>
-          <button class="promo__btn-menu btn"></button>
+          <button class="promo__btn-menu"></button>
         </div>
         <h1 class="promo__header">Мы продаем велосипеды</h1>
         <p class="promo__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
@@ -38,12 +38,12 @@
       <form class="form">
         <p class="form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
         <div class="form__input-wrapper">
-          <input class="form__input" type="text" placeholder="Введите Ваше Имя">
+          <input class="form__input" type="text" placeholder="Введите Ваше Имя" required>
         </div>
         <div class="form__input-wrapper">
-          <input class="form__input" type="tel" placeholder="Введите Ваш номер телефона">
+          <input class="form__input" type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона" required>
         </div>
-        <a href="#">Подобрать велосипед мечты</a>
+        <button class="btn" type="submit">Подобрать велосипед мечты</button>
       </form>
     </section>
   </header>

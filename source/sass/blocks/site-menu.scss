@@ -13,8 +13,12 @@
   justify-content: space-between;
   font-weight: 300;
   line-height: 32px;
-  letter-spacing: -0.5%;
+  // letter-spacing: -0.5%;
   border-bottom: 1px solid rgba($color-white, 0.2);
+
+  @media (max-width: tablet-max-width) {
+    flex-direction: column;
+  }
 }
 
 .site-menu__link {

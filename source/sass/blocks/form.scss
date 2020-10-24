@@ -13,12 +13,19 @@
 }
 
 .form__input-wrapper:not(:last-child) {
-  padding-bottom: 21px;
+  padding-bottom: 20px;
 }
 
 .form__input {
   width: 100%;
+  padding: 14px 20px 10px 30px;
   border: 0;
   border-radius: 5px;
   height: 48px;
+
+  &::placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba($color-grey, 0.5);
+  }
 }
