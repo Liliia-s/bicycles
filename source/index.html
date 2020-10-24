@@ -13,9 +13,42 @@
 </head>
 
 <body>
-  <header>
+  <header class="site-header">
+    <nav class="site-header__menu site-menu">
+      <ul class="site-menu__list">
+        <li class="site-menu__item"><a href="#about" class="site-menu__link">О нас</a></li>
+        <li class="site-menu__item"><a href="#bikes" class="site-menu__link">Виды велосипедов</a></li>
+        <li class="site-menu__item"><a href="#video" class="site-menu__link">Видео про велосипеды</a></li>
+        <li class="site-menu__item"><a href="#contacts" class="site-menu__link">Контакты</a></li>
+      </ul>
+    </nav>
+    <section class="site-header__promo promo">
+      <div class="promo__wrapper">
+        <div class="promo__wrapper-logo">
+          <a class="promo__logo">
+            <picture>
+              <img src="img/logo.svg" alt="Логотип интернет-магазина велосипедов - Moon">
+            </picture>
+          </a>
+          <button class="promo__btn-menu btn"></button>
+        </div>
+        <h1 class="promo__header">Мы продаем велосипеды</h1>
+        <p class="promo__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+      </div>
+      <form class="form">
+        <p class="form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+        <div class="form__input-wrapper">
+          <input class="form__input" type="text" placeholder="Введите Ваше Имя">
+        </div>
+        <div class="form__input-wrapper">
+          <input class="form__input" type="tel" placeholder="Введите Ваш номер телефона">
+        </div>
+        <a href="#">Подобрать велосипед мечты</a>
+      </form>
+    </section>
   </header>
   <main>
+
   </main>
   <footer>
   </footer>
