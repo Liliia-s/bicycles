@@ -1,6 +1,16 @@
 .form {
   max-width: 327px;
   padding-top: 5px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 71px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 }
 
 .form__text {
@@ -10,6 +20,16 @@
   font-weight: 600;
   text-align: center;
   color: $color-white;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 29px;
+    font-size: 18px;
+    color: $color-black;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 19px;
+  }
 }
 
 .form__input-wrapper:not(:last-child) {
@@ -27,5 +47,20 @@
     font-size: 15px;
     line-height: 24px;
     color: rgba($color-grey, 0.5);
+  }
+
+  @media (max-width: $tablet-max-width) {
+    border: 1px solid $color-grey-light-2;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 26px;
+  }
+}
+
+.form__btn {
+  @media (max-width: $mobile-max-width) {
+    padding-right: 28px;
+    padding-left: 28px;
   }
 }

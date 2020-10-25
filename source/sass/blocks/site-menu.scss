@@ -16,11 +16,48 @@
   // letter-spacing: -0.5%;
   border-bottom: 1px solid rgba($color-white, 0.2);
 
-  @media (max-width: tablet-max-width) {
+  @media (max-width: $tablet-max-width) {
     flex-direction: column;
+    padding: 0;
+    font-size: 25px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.site-menu__item {
+  &:not(:last-child) {
+    @media (max-width: $tablet-max-width) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 32px;
+    }
   }
 }
 
 .site-menu__link {
+  display: block;
   color: rgba($color-white, 0.7);
+
+  @media (max-width: $tablet-max-width) {
+    position: relative;
+    padding: 15px;
+    color: $color-grey-dark;
+    background-color: $color-grey-light;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      right: 16px;
+      width: 25px;
+      height: 25px;
+      background: url("../../img/arrow-right.svg") no-repeat;
+    }
+  }
 }
