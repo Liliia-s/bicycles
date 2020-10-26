@@ -1,12 +1,18 @@
 .promo {
   display: flex;
   justify-content: space-between;
+  padding: 0 280px;
+  padding-top: 255px;
   padding-bottom: 239px;
+
+  @media (max-width: $desktop-max-width-2) {
+    padding-left: 121px;
+    padding-right: 121px;
+  }
 
   @media (max-width: $tablet-max-width) {
     display: block;
-    // align-items: center;
-    // flex-direction: column;
+    padding: 0;
   }
 }
 
@@ -52,10 +58,6 @@
     display: none;
   }
 }
-
-// .promo__btn-menu {
-//   display: none;
-// }
 
 .promo__header {
   @include reset-indent;

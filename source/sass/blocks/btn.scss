@@ -6,8 +6,18 @@
   line-height: 21px;
   font-weight: 600;
   text-align: center;
-  color: #000000;
+  color: $color-black;
   background-color: $color-mint;
   border: none;
   border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-black, 0.6);
+  }
+
+  &:active {
+    color: $color-white;
+    background-color: $color-mint-dark;
+  }
 }
