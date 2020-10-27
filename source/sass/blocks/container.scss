@@ -4,11 +4,11 @@
   max-width: $desktop-max-width;
   width: 100%;
 
-  @media (width: $tablet-max-width) {
+  @media (max-width: $desktop-max-width-2) {
     padding: 0 89px;
   }
 
-  @media (width: $mobile-max-width) {
-    padding: 0 16px;
+  @media (max-width: $mobile-max-width) {
+    padding: 0 14px;
   }
 }

@@ -1,0 +1,23 @@
+.video {
+  padding-top: 121px;
+  background-color: $color-black-2;
+}
+
+.video__title {
+  padding-bottom: 19px;
+  color: $color-white;
+}
+
+.video__text {
+  @include reset-indent;
+  max-width: 340px;
+  margin: 0 auto;
+  padding-bottom: 55px;
+  font-weight: 300;
+  text-align: center;
+  color: rgba($color-white, 0.7);
+}
+
+.video__photo {
+  margin: 0 auto;
+}

@@ -1,0 +1,13 @@
+.subtitle {
+  @include reset-indent;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: $color-black-light;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 24px;
+    line-height: 41px;
+  }
+}

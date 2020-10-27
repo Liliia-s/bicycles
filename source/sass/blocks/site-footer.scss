@@ -1,0 +1,29 @@
+.site-footer__title {
+  padding-bottom: 30px;
+}
+
+.site-footer__text {
+  @include reset-indent;
+  max-width: 555px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 31px;
+  text-align: center;
+  color: rgba($color-black, 0.7);
+}
+
+.site-footer__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+}
+
+.site-footer__link {
+  padding-left: 30px;
+  line-height: 22px;
+  color: rgba($color-black, 0.5);
+
+  &:not(:last-child) {
+    padding-right: 90px;
+  }
+}
