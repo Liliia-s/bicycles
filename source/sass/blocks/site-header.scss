@@ -8,6 +8,11 @@
 }
 
 .site-header__wrapper {
+  max-width: $desktop-max-width;
+  margin: 0 auto;
+}
+
+.site-header__logo-wrapper {
   display: none;
 
   @media (max-width: $tablet-max-width) {
