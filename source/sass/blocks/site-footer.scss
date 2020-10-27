@@ -1,29 +1,148 @@
+.site-footer {
+  padding-top: 72px;
+  padding-bottom: 95px;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0 35px;
+    padding-top: 24px;
+    padding-bottom: 52px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    @include reset-indent;
+    padding-top: 25px;
+  }
+}
+
+.site-footer__description-wrapper {
+  @media (min-width: $tablet-width) {
+    @include reset-indent;
+  }
+}
+
 .site-footer__title {
   padding-bottom: 30px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 15px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 18px;
+  }
 }
 
 .site-footer__text {
   @include reset-indent;
   max-width: 555px;
   margin: 0 auto;
+  padding-bottom: 40px;
   font-size: 17px;
   line-height: 31px;
   text-align: center;
   color: rgba($color-black, 0.7);
+
+  @media (max-width: $tablet-max-width) {
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    max-width: 266px;
+    padding-bottom: 18px;
+  }
+}
+
+.site-footer__map {
+  position: relative;
+  padding-bottom: 35px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 18px;
+  }
+}
+
+.site-footer__map-iframe {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 957px;
+  height: 530px;
+  display: block;
+
+  @media (max-width: $desktop-max-width-2) {
+    width: 698px;
+    height: 545px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 320px;
+    height: 250px;
+  }
+}
+
+.site-footer__map-image {
+  margin: 0 auto;
+}
+
+.site-footer__list-wrapper {
+  @media (min-width: $tablet-width) {
+    @include reset-indent;
+  }
 }
 
 .site-footer__list {
   @include reset-list;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+  }
+}
+
+.site-footer__item {
+  &:not(:last-child) {
+    margin-right: 93px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-right: 0;
+    }
+  }
 }
 
 .site-footer__link {
-  padding-left: 30px;
+  position: relative;
   line-height: 22px;
   color: rgba($color-black, 0.5);
 
-  &:not(:last-child) {
-    padding-right: 90px;
+  &--mail {
+    padding-left: 30px;
+  }
+
+  &--tel {
+    padding-left: 35px;
+  }
+}
+
+.site-footer__icon {
+  content: "";
+  position: absolute;
+  top: 0;
+
+  &--mail {
+    left: -15px;
+    width: 26px;
+    height: 20px;
+  }
+
+  &--tel {
+    left: -3px;
+    width: 22px;
+    height: 23px;
   }
 }

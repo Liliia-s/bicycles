@@ -112,15 +112,19 @@
       </div>
     </section>
     <section class="video">
-      <div class="container">
-        <h2 class="video__title subtitle">Видео про велосипеды</h2>
-        <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+      <div class="video__description-wrapper">
+        <div class="container">
+          <h2 class="video__title subtitle">Видео про велосипеды</h2>
+          <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        </div>
+      </div>
+      <div class="video__photo-wrapper container">
         <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/video-bike-desktop.webp 1x, img/video-bike-desktop@2.webp 2x">
+          <source type="image/webp" media="(min-width: 1024px)" srcset="img/video-bike-desktop.webp 1x, img/video-bike-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/video-bike-tablet.webp 1x, img/video-bike-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/video-bike-mobile.webp 1x, img/video-bike-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1440px)" srcset="img/video-bike-desktop.png 1x, img/video-bike-desktop@2x.png 2x">
+          <source media="(min-width: 1024px)" srcset="img/video-bike-desktop.png 1x, img/video-bike-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/video-bike-tablet.png 1x, img/video-bike-tablet@2x.png 2x">
           <img class="video__photo" src="img/video-bike-mobile.png" srcset="img/video-bike-mobile@2x.png 2x" alt="Видео про велосипеды">
         </picture>
@@ -128,22 +132,38 @@
     </section>
   </main>
   <footer class="site-footer container">
-    <h2 class="site-footer__title subtitle">Как нас найти?</h2>
-    <p class="site-footer__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-    <ul class="site-footer__list">
-      <li class="site-footer__item">
-        <a href="" class="site-footer__link site-footer__link--mail">
-          <svg class="site-footer__icon site-footer__icon--mail" width="26" height="20">
-            <use xlink:href="img/sprite.svg#icon-mail"></use>
-          </svg>
-          puteshestviemechta@gmail.ru</a></li>
-      <li class="site-footer__item">
-        <a href="" class="site-footer__link site-footer__link--tel">
-          <svg class="site-footer__icon site-footer__icon--tel" width="22" height="23">
-            <use xlink:href="img/sprite.svg#icon-phone"></use>
-          </svg>
-          +7 (499) -784-684-46</a></li>
-    </ul>
+    <div class="site-footer__description-wrapper container">
+      <h2 class="site-footer__title subtitle">Как нас найти?</h2>
+      <p class="site-footer__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+    </div>
+    <div class="site-footer__map">
+      <iframe class="site-footer__map-iframe" src="https://www.google.ru/maps/d/embed?mid=1NiERkeAQxdjzrdMQ0gcSNCqIagpv5r_j&hl=ru" width="957" height="530"></iframe>
+      <picture>
+        <source type="image/webp" media="(min-width: 1024px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1024px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+        <img class="site-footer__map-image" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="Схема проезда к интернет-магазину Moon по адресу ул. Большая Конюшенная, д. 19">
+      </picture>
+    </div>
+    <div class="site-footer__list-wrapper container">
+      <ul class="site-footer__list">
+        <li class="site-footer__item">
+          <a href="" class="site-footer__link site-footer__link--mail">
+            <svg class="site-footer__icon site-footer__icon--mail" width="26" height="20">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            puteshestviemechta@gmail.ru</a></li>
+        <li class="site-footer__item">
+          <a href="" class="site-footer__link site-footer__link--tel">
+            <svg class="site-footer__icon site-footer__icon--tel" width="22" height="23">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            +7 (499) -784-684-46</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 

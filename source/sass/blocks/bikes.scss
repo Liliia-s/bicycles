@@ -12,6 +12,10 @@
     padding-top: 50px;
     padding-bottom: 20px;
   }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 11px;
+  }
 }
 
 .bikes__wrapper {
@@ -22,7 +26,7 @@
 }
 
 .bikes__title {
-  padding-bottom: 49px;
+  padding-bottom: 50px;
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 30px;
