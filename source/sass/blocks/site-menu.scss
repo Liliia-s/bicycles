@@ -16,6 +16,12 @@
   @media (max-width: $mobile-max-width) {
     padding-bottom: 138px;
   }
+
+  &--hide {
+    @media (max-width: $tablet-max-width) {
+      display: none;
+    }
+  }
 }
 
 .site-menu__list {

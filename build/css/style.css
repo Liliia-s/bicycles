@@ -389,7 +389,7 @@ html {
       padding: 0 15px; } }
 
 .site-header {
-  background: url("../../img/background-bike-desktop.png") no-repeat #000000;
+  background: url("../../img/background-bike-desktop.png") no-repeat #000000 50% 50%;
   background-size: cover; }
   @media (max-width: 1023px) {
     .site-header {
@@ -398,6 +398,9 @@ html {
 .site-header__wrapper {
   max-width: 1440px;
   margin: 0 auto; }
+
+.site-header__logo {
+  padding-top: 20px; }
 
 .site-header__logo-wrapper {
   display: none; }
@@ -413,16 +416,26 @@ html {
           -ms-flex-align: center;
               align-items: center;
       padding-bottom: 82px;
-      padding-left: 14px; } }
+      padding-left: 22px; } }
   @media (max-width: 767px) {
     .site-header__logo-wrapper {
-      padding-bottom: 50px; } }
+      padding-bottom: 50px;
+      padding-left: 14px; } }
+  @media (min-width: 768px) {
+    .site-header__logo-wrapper--indent {
+      padding-bottom: 37px; } }
 
 .site-header__btn-menu {
+  display: none;
   width: 50px;
   height: 50px;
   background-color: transparent;
   border: none; }
+  .site-header__btn-menu--open {
+    display: block;
+    background: url("../../img/icon-menu-open.svg") no-repeat #0ad9c6 50% 50%; }
+  .site-header__btn-menu--close {
+    background: url("../../img/icon-menu-close.svg") no-repeat transparent 50% 50%; }
 
 .site-menu {
   padding-top: 21px;
@@ -439,6 +452,9 @@ html {
   @media (max-width: 767px) {
     .site-menu {
       padding-bottom: 138px; } }
+  @media (max-width: 1023px) {
+    .site-menu--hide {
+      display: none; } }
 
 .site-menu__list {
   margin: 0;
@@ -525,16 +541,6 @@ html {
       display: block;
       padding: 0; } }
 
-@media (max-width: 1023px) {
-  .promo__wrap {
-    background: url("../../img/background-bike-tablet.png") no-repeat #000000;
-    background-size: cover; } }
-
-@media (max-width: 767px) {
-  .promo__wrap {
-    background: url("../../img/background-bike-mobile.png") no-repeat #000000;
-    background-size: cover; } }
-
 .promo__wrapper {
   max-width: 400px; }
   @media (max-width: 1023px) {
@@ -544,7 +550,7 @@ html {
       padding-right: 121px;
       padding-bottom: 80px;
       padding-left: 121px;
-      background: url("../../img/background-bike-tablet.png") no-repeat #000000;
+      background: url("../../img/background-bike-tablet.png") no-repeat #000000 50% 50%;
       background-size: cover; } }
   @media (max-width: 767px) {
     .promo__wrapper {
@@ -552,8 +558,14 @@ html {
       padding-right: 16px;
       padding-bottom: 69px;
       padding-left: 16px;
-      background: url("../../img/background-bike-mobile.png") no-repeat #000000 100% 100%;
+      background: url("../../img/background-bike-mobile.png") no-repeat #000000 50% 50%;
       background-size: cover; } }
+  .promo__wrapper--indents {
+    margin-top: -100px;
+    padding-top: 121px; }
+    @media (min-width: 768px) {
+      .promo__wrapper--indents {
+        padding-top: 147px; } }
 
 .promo__wrapper-logo {
   padding-bottom: 29px; }
