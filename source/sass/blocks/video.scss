@@ -48,25 +48,6 @@
   position: relative;
   margin-top: -424px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: url("../../img/icon-play.svg") no-repeat;
-    background-size: cover;
-
-    @media (min-width: $tablet-width) and (max-width: $desktop-max-width-2) {
-      width: 91px;
-      height: 91px;
-    }
-  }
-
   @media (max-width: $tablet-max-width) {
     margin-top: -197px;
   }
@@ -78,4 +59,33 @@
 
 .video__photo {
   margin: 0 auto;
+}
+
+.video__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  background: url("../../img/icon-play.svg") no-repeat;
+  background-size: cover;
+  border: 0;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+
+  &:hover,
+  &:focus {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-max-width-2) {
+    width: 91px;
+    height: 91px;
+  }
 }

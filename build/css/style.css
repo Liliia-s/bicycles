@@ -962,22 +962,6 @@ html {
 .video__photo-wrapper {
   position: relative;
   margin-top: -424px; }
-  .video__photo-wrapper::before {
-    content: "";
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: url("../../img/icon-play.svg") no-repeat;
-    background-size: cover; }
-    @media (min-width: 768px) and (max-width: 1439px) {
-      .video__photo-wrapper::before {
-        width: 91px;
-        height: 91px; } }
   @media (max-width: 1023px) {
     .video__photo-wrapper {
       margin-top: -197px; } }
@@ -987,6 +971,33 @@ html {
 
 .video__photo {
   margin: 0 auto; }
+
+.video__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  background: url("../../img/icon-play.svg") no-repeat;
+  background-size: cover;
+  border: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out; }
+  .video__play-btn:hover, .video__play-btn:focus {
+    -webkit-transform: translate(-50%, -50%) scale(1.2);
+            transform: translate(-50%, -50%) scale(1.2); }
+  .video__play-btn:active {
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+            transform: translate(-50%, -50%) scale(0.8); }
+  @media (min-width: 768px) and (max-width: 1439px) {
+    .video__play-btn {
+      width: 91px;
+      height: 91px; } }
 
 .site-footer {
   padding-top: 72px;
