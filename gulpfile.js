@@ -20,6 +20,7 @@ var htmlmin = require('gulp-htmlmin');
 var jsmin = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
 var jsmerge = require('gulp-concat');
+// var imask = require('imask');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -81,10 +82,10 @@ gulp.task('htmlmin', function () {
 
 gulp.task('js', function () {
   return pipeline(
-      gulp.src('source/js/*.js'),
-      // jsmerge('scripts.min.js'),
-      // jsmin(),
-      gulp.dest('build/js')
+    gulp.src('source/js/*.js'),
+    // jsmerge('scripts.min.js'),
+    // jsmin(),
+    gulp.dest('build/js')
   );
 });
 
@@ -107,7 +108,7 @@ gulp.task('clean', function () {
 
 gulp.task('copy', function () {
   return gulp.src([
-    "source/*.html",
+    'source/*.html',
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
     'source/js/**'

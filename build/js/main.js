@@ -6,6 +6,7 @@ let menuButton = header.querySelector('.site-header__btn-menu');
 let promoWrap = header.querySelector('.promo__wrapper');
 let logoWrapper = header.querySelector('.site-header__logo-wrapper');
 let buttonMenu = header.querySelector('.site-header__btn-menu');
+let inputTel = header.querySelector('.form__input--tel');
 
 let hideMenu = function () {
   menu.classList.toggle('site-menu--hide');
@@ -22,3 +23,7 @@ let buttonMenuOnClick = function () {
 };
 
 buttonMenu.addEventListener('click', buttonMenuOnClick);
+
+let phoneMask = IMask(inputTel, {
+    mask: '+{7} (000) 000 - 00 - 00'
+  });
