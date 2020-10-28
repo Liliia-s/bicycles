@@ -1,9 +1,10 @@
 .promo {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 280px;
   padding-top: 255px;
-  padding-bottom: 239px;
+  padding-bottom: 240px;
 
   @media (max-width: $desktop-max-width-2) {
     padding-left: 121px;
@@ -15,23 +16,6 @@
     padding: 0;
   }
 }
-
-// .promo__wrap {
-//   // @media (max-width: $tablet-max-width) {
-//   //   background: url("../../img/background-bike-tablet.png") no-repeat $color-black 50% 50%;
-//   //   background-size: cover;
-//   // }
-
-//   // @media (max-width: $mobile-max-width) {
-//   //   background: url("../../img/background-bike-mobile.png") no-repeat $color-black 50% 50%;
-//   //   background-size: cover;
-//   // }
-
-//   // &--indents {
-//   //   margin-top: -100px;
-//   //   padding-top: 100px;
-//   // }
-// }
 
 .promo__wrapper {
   max-width: 400px;
@@ -56,10 +40,12 @@
   }
 
   &--indents {
-    margin-top: -100px;
-    padding-top: 121px;
+    @media (max-width: $tablet-max-width) {
+      margin-top: -100px;
+      padding-top: 121px;
+    }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
       padding-top: 147px;
     }
   }

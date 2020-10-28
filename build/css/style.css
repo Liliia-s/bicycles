@@ -366,6 +366,18 @@ html {
   font-display: swap;
   src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff"); }
 
+@media (max-width: 321px) {
+  body {
+    background: url("../img/mobile.jpg") no-repeat;
+    min-height: 3954px;
+    opacity: 0.2; } }
+
+@media (min-width: 768px) and (max-width: 768px) {
+  body {
+    background: url("../img/tablet.jpg") no-repeat;
+    min-height: 3440px;
+    opacity: 0.2; } }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -472,9 +484,6 @@ html {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   font-weight: 300;
   line-height: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
@@ -492,13 +501,17 @@ html {
       font-size: 20px;
       line-height: 28px; } }
 
-@media (max-width: 1023px) {
-  .site-menu__item:not(:last-child) {
-    margin-bottom: 30px; } }
-
-@media (max-width: 767px) {
-  .site-menu__item:not(:last-child) {
-    margin-bottom: 32px; } }
+.site-menu__item:not(:last-child) {
+  margin-right: auto;
+  padding-right: 40px; }
+  @media (max-width: 1023px) {
+    .site-menu__item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 30px;
+      padding-right: 0; } }
+  @media (max-width: 767px) {
+    .site-menu__item:not(:last-child) {
+      margin-bottom: 32px; } }
 
 .site-menu__link {
   display: block;
@@ -511,6 +524,7 @@ html {
     .site-menu__link {
       position: relative;
       padding: 15px;
+      padding-right: 40px;
       color: #48494d;
       background-color: #f6f6f6; }
       .site-menu__link::after {
@@ -526,12 +540,14 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 280px;
   padding-top: 255px;
-  padding-bottom: 239px; }
+  padding-bottom: 240px; }
   @media (max-width: 1439px) {
     .promo {
       padding-left: 121px;
@@ -560,12 +576,13 @@ html {
       padding-left: 16px;
       background: url("../../img/background-bike-mobile.png") no-repeat #000000 50% 50%;
       background-size: cover; } }
-  .promo__wrapper--indents {
-    margin-top: -100px;
-    padding-top: 121px; }
-    @media (min-width: 768px) {
-      .promo__wrapper--indents {
-        padding-top: 147px; } }
+  @media (max-width: 1023px) {
+    .promo__wrapper--indents {
+      margin-top: -100px;
+      padding-top: 121px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .promo__wrapper--indents {
+      padding-top: 147px; } }
 
 .promo__wrapper-logo {
   padding-bottom: 29px; }
@@ -796,7 +813,7 @@ html {
   z-index: -2; }
   @media (min-width: 1440px) {
     .bikes {
-      padding-bottom: 99px; } }
+      padding-bottom: 98px; } }
   @media (max-width: 1439px) {
     .bikes {
       padding-top: 50px;
@@ -1001,18 +1018,18 @@ html {
 
 .site-footer {
   padding-top: 72px;
-  padding-bottom: 95px; }
+  padding-bottom: 71px; }
   @media (max-width: 1023px) {
     .site-footer {
       padding: 0 35px;
       padding-top: 24px;
-      padding-bottom: 52px; } }
+      padding-bottom: 29px; } }
   @media (max-width: 767px) {
     .site-footer {
       margin: 0;
       padding: 0;
       padding-top: 25px;
-      padding-bottom: 53px; } }
+      padding-bottom: 30px; } }
 
 @media (min-width: 768px) {
   .site-footer__description-wrapper {
@@ -1099,21 +1116,21 @@ html {
       -ms-flex-line-pack: center;
           align-content: center; } }
 
-.site-footer__item:not(:last-child) {
-  margin-right: 93px; }
+.site-footer__item {
+  padding-bottom: 23px; }
+  .site-footer__item:not(:last-child) {
+    margin-right: 93px; }
+    @media (max-width: 767px) {
+      .site-footer__item:not(:last-child) {
+        margin-right: 0; } }
   @media (max-width: 767px) {
-    .site-footer__item:not(:last-child) {
-      margin-right: 0;
-      padding-bottom: 23px; } }
-
-@media (max-width: 767px) {
-  .site-footer__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+    .site-footer__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .site-footer__link {
   position: relative;

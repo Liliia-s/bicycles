@@ -1,17 +1,17 @@
 .site-footer {
   padding-top: 72px;
-  padding-bottom: 95px;
+  padding-bottom: 71px;
 
   @media (max-width: $tablet-max-width) {
     padding: 0 35px;
     padding-top: 24px;
-    padding-bottom: 52px;
+    padding-bottom: 29px;
   }
 
   @media (max-width: $mobile-max-width) {
     @include reset-indent;
     padding-top: 25px;
-    padding-bottom: 53px;
+    padding-bottom: 30px;
   }
 }
 
@@ -104,12 +104,13 @@
 }
 
 .site-footer__item {
+  padding-bottom: 23px;
+
   &:not(:last-child) {
     margin-right: 93px;
 
     @media (max-width: $mobile-max-width) {
       margin-right: 0;
-      padding-bottom: 23px;
     }
   }
 
