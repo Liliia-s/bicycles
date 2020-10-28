@@ -46,10 +46,12 @@
         <form class="form" action="https://echo.htmlacademy.ru" method="POST">
           <p class="form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <div class="form__input-wrapper">
-            <input class="form__input" type="text" placeholder="Введите Ваше Имя" required>
+            <label class="visually-hidden" for="name">Введите Ваш номер телефона</label>
+            <input class="form__input" type="text" name="field-name" id="name" placeholder="Введите Ваше Имя" required>
           </div>
           <div class="form__input-wrapper">
-            <input class="form__input form__input--tel" type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона" required>
+            <label class="visually-hidden" for="tel">Введите Ваш номер телефона</label>
+            <input class="form__input form__input--tel" type="tel" name="field-tel" id="tel" placeholder="Введите Ваш номер телефона" required>
           </div>
           <button class="form__btn btn" type="submit">Подобрать велосипед мечты</button>
         </form>

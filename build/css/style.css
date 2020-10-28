@@ -366,6 +366,16 @@ html {
   font-display: swap;
   src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff"); }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0); }
+
 .container {
   margin: 0 auto;
   padding: 0 137px;

@@ -20,7 +20,7 @@ var htmlmin = require('gulp-htmlmin');
 var jsmin = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
 var jsmerge = require('gulp-concat');
-// var imask = require('imask');
+var imask = require('imask');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
