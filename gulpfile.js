@@ -77,10 +77,10 @@ gulp.task('htmlmin', function () {
 
 gulp.task('js', function () {
   return pipeline(
-    gulp.src('source/js/*.js'),
-    // jsmerge('scripts.min.js'),
-    // jsmin(),
-    gulp.dest('build/js')
+      gulp.src('source/js/*.js'),
+      // jsmerge('scripts.min.js'),
+      // jsmin(),
+      gulp.dest('build/js')
   );
 });
 

@@ -65,25 +65,25 @@
     padding-bottom: 37px;
   }
 
-  &:nth-child(1) {
+  &--choice {
     &::before {
       content: "01";
     }
   }
 
-  &:nth-child(2) {
+  &--delivery {
     &::before {
       content: "02";
     }
   }
 
-  &:nth-child(3) {
+  &--accessories {
     &::before {
       content: "03";
     }
   }
 
-  &:nth-child(4) {
+  &--consultation {
     &::before {
       content: "04";
     }
@@ -100,4 +100,8 @@
     font-weight: 700;
     color: $color-mint;
   }
+}
+
+.about__text {
+  @include reset-indent;
 }

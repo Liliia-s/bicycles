@@ -375,6 +375,24 @@ html {
   font-display: swap;
   src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff"); }
 
+@media (max-width: 321px) {
+  body {
+    background: url("../img/mobile.jpg") no-repeat;
+    min-height: 3954px;
+    opacity: 0.2; } }
+
+@media (min-width: 768px) and (max-width: 768px) {
+  body {
+    background: url("../img/tablet.jpg") no-repeat;
+    min-height: 3440px;
+    opacity: 0.2; } }
+
+@media (min-width: 1024px) {
+  body {
+    background: url("../img/desktop.jpg") no-repeat;
+    min-height: 4172px;
+    opacity: 0.2; } }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -618,7 +636,6 @@ html {
       text-align: center; } }
 
 .btn {
-  display: block;
   width: 100%;
   padding: 15px 48px;
   font-size: 15px;
@@ -700,10 +717,12 @@ html {
     .form__input {
       padding-left: 26px; } }
 
-@media (max-width: 767px) {
-  .form__btn {
-    padding-right: 28px;
-    padding-left: 28px; } }
+.form__btn {
+  display: block; }
+  @media (max-width: 767px) {
+    .form__btn {
+      padding-right: 28px;
+      padding-left: 28px; } }
 
 .subtitle {
   margin: 0;
@@ -784,13 +803,13 @@ html {
       font-size: 18px;
       margin-right: 0;
       padding-bottom: 37px; } }
-  .about__item:nth-child(1)::before {
+  .about__item--choice::before {
     content: "01"; }
-  .about__item:nth-child(2)::before {
+  .about__item--delivery::before {
     content: "02"; }
-  .about__item:nth-child(3)::before {
+  .about__item--accessories::before {
     content: "03"; }
-  .about__item:nth-child(4)::before {
+  .about__item--consultation::before {
     content: "04"; }
   .about__item::before {
     position: absolute;
@@ -802,6 +821,10 @@ html {
     line-height: 38px;
     font-weight: 700;
     color: #0ad9c6; }
+
+.about__text {
+  margin: 0;
+  padding: 0; }
 
 .bikes {
   position: relative;
@@ -905,7 +928,7 @@ html {
         top: -22px;
         right: -14px; } }
   .bikes__item:not(:last-child) {
-    padding-right: 50px; }
+    padding-right: 49px; }
     @media (max-width: 1439px) {
       .bikes__item:not(:last-child) {
         padding-right: 20px; } }
@@ -990,6 +1013,7 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
+  display: block;
   width: 65px;
   height: 65px;
   margin: auto;
