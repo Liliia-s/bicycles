@@ -36,7 +36,7 @@ gulp.task('images', function () {
   return gulp.src('source/img/*.{png,jpg,svg}')
     .pipe(imagemin([
       imagemin.optipng({
-        optimizationLevel: 3
+        optimizationLevel: 5
       }),
       imagemin.mozjpeg({
         progressive: true
@@ -49,7 +49,7 @@ gulp.task('images', function () {
 gulp.task('webp', function () {
   return gulp.src('source/img/*.{png,jpg}')
     .pipe(webp({
-      quality: 90
+      quality: 70
     }))
     .pipe(gulp.dest('source/img'));
 });
@@ -65,9 +65,9 @@ gulp.task('sprite', function () {
 
 gulp.task('js', function () {
   return pipeline(
-      gulp.src(['source/js/*.js', '!source/js/main.js']),
-      jsmerge('vendor.js'),
-      gulp.dest('build/js')
+    gulp.src(['source/js/*.js', '!source/js/main.js']),
+    jsmerge('vendor.js'),
+    gulp.dest('build/js')
   );
 });
 
