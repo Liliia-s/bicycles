@@ -54,11 +54,16 @@
   ],
   "editorconfig-cli": [
     "source/*.html",
-    "source/img/**/*.svg"
+    "source/sass/**/*.scss"
   ],
   "eslint": [
     "source/*.js",
     "source/js/*.js"
+  ],
+  "eslintIgnore": [
+    "picturefill.js",
+    "svg4everybody.js",
+    "imask.js"
   ],
   "engines": {
     "node": "8.16"
