@@ -16,12 +16,12 @@
   <header class="site-header">
     <div class="site-header__wrapper">
       <div class="site-header__logo-wrapper">
-        <a class="site-header__logo">
+        <a>
           <img src="img/logo.svg" alt="Логотип интернет-магазина велосипедов - Moon" width="68" height="21">
         </a>
-        <button class="site-header__btn-menu" type="button" aria-label="Закрыть меню"></button>
+        <button type="button" aria-label="Закрыть меню"></button>
       </div>
-      <nav class="site-header__menu site-menu">
+      <nav class="site-menu">
         <ul class="site-menu__list">
           <li class="site-menu__item"><a href="#about" class="site-menu__link">О нас</a></li>
           <li class="site-menu__item"><a href="#bikes" class="site-menu__link">Виды велосипедов</a></li>
@@ -29,7 +29,7 @@
           <li class="site-menu__item"><a href="#contacts" class="site-menu__link">Контакты</a></li>
         </ul>
       </nav>
-      <section class="site-header__promo promo">
+      <section class="promo">
         <div class="promo__wrapper">
           <div class="promo__wrapper-logo">
             <a class="promo__logo">
@@ -40,42 +40,42 @@
           <p class="promo__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
         <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-          <p class="form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-          <div class="form__input-wrapper">
+          <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+          <div>
             <label class="visually-hidden" for="field-name">Введите Ваш номер телефона</label>
-            <input class="form__input" type="text" name="name" id="field-name" placeholder="Введите Ваше Имя" required>
+            <input type="text" name="name" id="field-name" placeholder="Введите Ваше Имя" required>
           </div>
-          <div class="form__input-wrapper">
+          <div>
             <label class="visually-hidden" for="field-tel">Введите Ваш номер телефона</label>
-            <input class="form__input form__input--tel" type="tel" name="tel" id="field-tel" placeholder="Введите Ваш номер телефона" required>
+            <input type="tel" name="tel" id="field-tel" placeholder="Введите Ваш номер телефона" required>
           </div>
-          <button class="form__btn btn" type="submit">Подобрать велосипед мечты</button>
+          <button class="btn" type="submit">Подобрать велосипед мечты</button>
         </form>
       </section>
     </div>
   </header>
   <main>
     <section class="about container" id="about">
-      <h2 class="about__title subtitle">Несколько фактов о наc</h2>
-      <ul class="about__list">
+      <h2 class="subtitle">Несколько фактов о наc</h2>
+      <ul>
         <li class="about__item about__item--choice">
-          <p class="about__text">Самый широкий выбор велосипедов!</p>
+          <p>Самый широкий выбор велосипедов!</p>
         </li>
         <li class="about__item about__item--delivery">
-          <p class="about__text">Доставка велосипедов по всей России!</p>
+          <p>Доставка велосипедов по всей России!</p>
         </li>
         <li class="about__item about__item--accessories">
-          <p class="about__text">Большой выбор крутых аксессуаров!</p>
+          <p>Большой выбор крутых аксессуаров!</p>
         </li>
         <li class="about__item about__item--consultation">
-          <p class="about__text">Профессиональные консультации!</p>
+          <p>Профессиональные консультации!</p>
         </li>
       </ul>
     </section>
     <section class="bikes" id="bikes">
-      <div class="bikes__wrapper container">
-        <h2 class="bikes__title subtitle">Виды велосипедов</h2>
-        <ul class="bikes__list">
+      <div class="container">
+        <h2 class="subtitle">Виды велосипедов</h2>
+        <ul>
           <li class="bikes__item bikes__item--road">
             <picture>
               <!-- 1х: 342px; 2x: 1006px -->
@@ -88,7 +88,7 @@
               <!-- 1х: 300px; 2x: 600px -->
               <img class="bikes__photo bikes__photo--road" src="img/bike-road-mobile-tablet.png" srcset="img/bike-road-mobile-tablet@2x.png 2x" alt="Дорожный велосипед">
             </picture>
-            <p class="bikes__category">Дорожный велосипед</p>
+            <p>Дорожный велосипед</p>
           </li>
           <li class="bikes__item bikes__item--mountain">
             <picture>
@@ -102,7 +102,7 @@
               <!-- 1х: 300px; 2x: 600px -->
               <img class="bikes__photo bikes__photo--mountain" src="img/bike-mountain-mobile-tablet.png" srcset="img/bike-mountain-mobile-tablet@2x.png 2x" alt="Горный велосипед">
             </picture>
-            <p class="bikes__category">Горный велосипед</p>
+            <p>Горный велосипед</p>
           </li>
           <li class="bikes__item bikes__item--kid">
             <picture>
@@ -116,7 +116,7 @@
               <!-- 1х: 300px; 2x: 600px -->
               <img class="bikes__photo bikes__photo--kid" src="img/bike-kid-mobile-tablet.png" srcset="img/bike-kid-mobile-tablet@2x.png 2x" alt="Детский велосипед">
             </picture>
-            <p class="bikes__category">Детский велосипед</p>
+            <p>Детский велосипед</p>
           </li>
         </ul>
       </div>
@@ -124,8 +124,8 @@
     <section class="video" id="video">
       <div class="video__description-wrapper">
         <div class="container">
-          <h2 class="video__title subtitle">Видео про велосипеды</h2>
-          <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+          <h2 class="subtitle">Видео про велосипеды</h2>
+          <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
         </div>
       </div>
       <div class="video__photo-wrapper container">
@@ -142,9 +142,9 @@
           <!-- 1х: 503px; 2x: 1006px -->
           <source media="(min-width: 768px)" srcset="img/video-bike-tablet.png 1x, img/video-bike-tablet@2x.png 2x">
           <!-- 1х: 288px; 2x: 576px -->
-          <img class="video__photo" src="img/video-bike-mobile.png" srcset="img/video-bike-mobile@2x.png 2x" alt="Видео про велосипеды">
+          <img src="img/video-bike-mobile.png" srcset="img/video-bike-mobile@2x.png 2x" alt="Видео про велосипеды">
         </picture>
-        <button class="video__play-btn" type="button" aria-label="Кнопка для воспроизведения видео">
+        <button type="button" aria-label="Кнопка для воспроизведения видео">
         </button>
       </div>
     </section>

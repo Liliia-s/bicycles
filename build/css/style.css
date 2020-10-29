@@ -426,9 +426,6 @@ html {
   max-width: 1440px;
   margin: 0 auto; }
 
-.site-header__logo {
-  padding-top: 20px; }
-
 .site-header__logo-wrapper {
   display: none; }
   @media (max-width: 1023px) {
@@ -452,16 +449,19 @@ html {
     .site-header__logo-wrapper--indent {
       padding-bottom: 37px; } }
 
-.site-header__btn-menu {
+.site-header__logo-wrapper a {
+  padding-top: 20px; }
+
+.site-header__logo-wrapper button {
   display: none;
   width: 50px;
   height: 50px;
   background-color: transparent;
   border: none; }
-  .site-header__btn-menu--open {
+  .site-header__logo-wrapper button--open {
     display: block;
     background: url("../../img/icon-menu-open.svg") no-repeat #0ad9c6 50% 50%; }
-  .site-header__btn-menu--close {
+  .site-header__logo-wrapper button--close {
     background: url("../../img/icon-menu-close.svg") no-repeat transparent 50% 50%; }
 
 .site-menu {
@@ -483,7 +483,7 @@ html {
     .site-menu--hide {
       display: none; } }
 
-.site-menu__list {
+.site-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -503,7 +503,7 @@ html {
   line-height: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
   @media (max-width: 1023px) {
-    .site-menu__list {
+    .site-menu ul {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -512,37 +512,37 @@ html {
       font-size: 25px;
       font-weight: 400; } }
   @media (max-width: 767px) {
-    .site-menu__list {
+    .site-menu ul {
       font-size: 20px;
       line-height: 28px; } }
 
-.site-menu__item:not(:last-child) {
+.site-menu__list li:not(:last-child) {
   margin-right: auto;
   padding-right: 40px; }
   @media (max-width: 1023px) {
-    .site-menu__item:not(:last-child) {
+    .site-menu__list li:not(:last-child) {
       margin-right: 0;
       margin-bottom: 30px;
       padding-right: 0; } }
   @media (max-width: 767px) {
-    .site-menu__item:not(:last-child) {
+    .site-menu__list li:not(:last-child) {
       margin-bottom: 32px; } }
 
-.site-menu__link {
+.site-menu__item a {
   display: block;
   color: rgba(255, 255, 255, 0.7); }
-  .site-menu__link:hover, .site-menu__link:focus {
+  .site-menu__item a:hover, .site-menu__item a:focus {
     opacity: 0.8; }
-  .site-menu__link:active {
+  .site-menu__item a:active {
     opacity: 0.6; }
   @media (max-width: 1023px) {
-    .site-menu__link {
+    .site-menu__item a {
       position: relative;
       padding: 15px;
       padding-right: 40px;
       color: #48494d;
       background-color: #f6f6f6; }
-      .site-menu__link::after {
+      .site-menu__item a::after {
         content: "";
         position: absolute;
         top: 18px;
@@ -664,7 +664,7 @@ html {
       padding-right: 16px;
       padding-left: 16px; } }
 
-.form__text {
+.form p {
   margin: 0;
   padding: 0;
   padding-bottom: 19px;
@@ -673,54 +673,54 @@ html {
   text-align: center;
   color: #ffffff; }
   @media (max-width: 1023px) {
-    .form__text {
+    .form p {
       padding-bottom: 29px;
       font-size: 18px;
       color: #000000; } }
   @media (max-width: 767px) {
-    .form__text {
+    .form p {
       padding-bottom: 19px; } }
 
-.form__input-wrapper:not(:last-child) {
+.form div:not(:last-child) {
   padding-bottom: 20px; }
 
-.form__input {
+.form input {
   width: 100%;
   padding: 14px 20px 10px 30px;
   border: 0;
   border-radius: 5px;
   height: 48px; }
-  .form__input::-webkit-input-placeholder {
+  .form input::-webkit-input-placeholder {
     font-size: 15px;
     line-height: 24px;
     color: rgba(28, 28, 28, 0.5); }
-  .form__input::-moz-placeholder {
+  .form input::-moz-placeholder {
     font-size: 15px;
     line-height: 24px;
     color: rgba(28, 28, 28, 0.5); }
-  .form__input:-ms-input-placeholder {
+  .form input:-ms-input-placeholder {
     font-size: 15px;
     line-height: 24px;
     color: rgba(28, 28, 28, 0.5); }
-  .form__input::-ms-input-placeholder {
+  .form input::-ms-input-placeholder {
     font-size: 15px;
     line-height: 24px;
     color: rgba(28, 28, 28, 0.5); }
-  .form__input::placeholder {
+  .form input::placeholder {
     font-size: 15px;
     line-height: 24px;
     color: rgba(28, 28, 28, 0.5); }
   @media (max-width: 1023px) {
-    .form__input {
+    .form input {
       border: 1px solid #c9ccd4; } }
   @media (max-width: 767px) {
-    .form__input {
+    .form input {
       padding-left: 26px; } }
 
-.form__btn {
+.form button {
   display: block; }
   @media (max-width: 767px) {
-    .form__btn {
+    .form button {
       padding-right: 28px;
       padding-left: 28px; } }
 
@@ -748,16 +748,16 @@ html {
     .about {
       padding-bottom: 45px; } }
 
-.about__title {
+.about h2 {
   padding-bottom: 50px; }
   @media (max-width: 1023px) {
-    .about__title {
+    .about h2 {
       padding-bottom: 30px; } }
   @media (max-width: 767px) {
-    .about__title {
+    .about h2 {
       padding-bottom: 29px; } }
 
-.about__list {
+.about ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -770,12 +770,12 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   @media (max-width: 1439px) {
-    .about__list {
+    .about ul {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
   @media (max-width: 767px) {
-    .about__list {
+    .about ul {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -783,7 +783,7 @@ html {
       -ms-flex-line-pack: center;
           align-content: center; } }
 
-.about__item {
+.about li {
   position: relative;
   max-width: 263px;
   padding-top: 53px;
@@ -792,26 +792,18 @@ html {
   line-height: 34px;
   text-align: center; }
   @media (max-width: 1439px) {
-    .about__item {
+    .about li {
       margin-right: 10px; } }
   @media (max-width: 1023px) {
-    .about__item {
+    .about li {
       margin-right: 10px; } }
   @media (max-width: 767px) {
-    .about__item {
+    .about li {
       max-width: 100%;
       font-size: 18px;
       margin-right: 0;
       padding-bottom: 37px; } }
-  .about__item--choice::before {
-    content: "01"; }
-  .about__item--delivery::before {
-    content: "02"; }
-  .about__item--accessories::before {
-    content: "03"; }
-  .about__item--consultation::before {
-    content: "04"; }
-  .about__item::before {
+  .about li::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -822,7 +814,19 @@ html {
     font-weight: 700;
     color: #0ad9c6; }
 
-.about__text {
+.about__item--choice::before {
+  content: "01"; }
+
+.about__item--delivery::before {
+  content: "02"; }
+
+.about__item--accessories::before {
+  content: "03"; }
+
+.about__item--consultation::before {
+  content: "04"; }
+
+.about p {
   margin: 0;
   padding: 0; }
 
@@ -843,17 +847,17 @@ html {
       padding-bottom: 11px; } }
 
 @media (min-width: 1440px) {
-  .bikes__wrapper {
+  .bikes div {
     padding-right: 157px;
     padding-left: 157px; } }
 
-.bikes__title {
+.bikes h2 {
   padding-bottom: 50px; }
   @media (max-width: 1023px) {
-    .bikes__title {
+    .bikes h2 {
       padding-bottom: 30px; } }
 
-.bikes__list {
+.bikes ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -866,90 +870,95 @@ html {
       -ms-flex-pack: center;
           justify-content: center; }
   @media (max-width: 767px) {
-    .bikes__list {
+    .bikes ul {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
 
-.bikes__item {
+.bikes li {
   position: relative;
   padding-bottom: 50px; }
-  .bikes__item::after {
+  .bikes li::after {
     content: "";
     position: absolute; }
-  .bikes__item::before {
+  .bikes li::before {
     content: "";
     position: absolute; }
-  .bikes__item--road::after, .bikes__item--kid::after {
-    background: url("../../img/icon-ellipse.svg") no-repeat;
-    background-size: cover; }
-  .bikes__item--road::after {
-    top: 166px;
-    left: -60px;
-    width: 180px;
-    height: 180px;
-    z-index: -1; }
-    @media (max-width: 1439px) {
-      .bikes__item--road::after {
-        top: auto;
-        bottom: 76px;
-        left: -42px;
-        width: 127px;
-        height: 127px; } }
-    @media (max-width: 767px) {
-      .bikes__item--road::after {
-        bottom: 69px;
-        left: -27px; } }
-  @media (min-width: 1440px) {
-    .bikes__item--mountain::before, .bikes__item--mountain::after {
-      width: 47px;
-      height: 47px;
-      background: url("../../img/icon-rectangle.svg") no-repeat; }
-    .bikes__item--mountain::before {
-      top: 21px;
-      left: -19px; }
-    .bikes__item--mountain::after {
-      bottom: 81px;
-      right: 27px; } }
-  .bikes__item--kid::after {
-    top: -32px;
-    right: -36px;
-    width: 95px;
-    height: 95px; }
-    @media (max-width: 1439px) {
-      .bikes__item--kid::after {
-        top: -21px;
-        right: -26px;
-        width: 68px;
-        height: 68px; } }
-    @media (max-width: 767px) {
-      .bikes__item--kid::after {
-        top: -22px;
-        right: -14px; } }
-  .bikes__item:not(:last-child) {
+  .bikes li:not(:last-child) {
     padding-right: 49px; }
     @media (max-width: 1439px) {
-      .bikes__item:not(:last-child) {
+      .bikes li:not(:last-child) {
         padding-right: 20px; } }
     @media (max-width: 767px) {
-      .bikes__item:not(:last-child) {
+      .bikes li:not(:last-child) {
         padding-right: 0; } }
   @media (max-width: 767px) {
-    .bikes__item {
+    .bikes li {
       -ms-flex-item-align: center;
           align-self: center;
       padding-bottom: 42px; } }
 
-.bikes__photo {
-  padding-bottom: 20px; }
-  @media (min-width: 1440px) {
-    .bikes__photo--road {
-      padding-top: 10px; }
-    .bikes__photo--mountain {
-      padding-top: 39px; } }
+.bikes__item--road::after, .bikes__item--kid::after {
+  background: url("../../img/icon-ellipse.svg") no-repeat;
+  background-size: cover; }
 
-.bikes__category {
+.bikes__item--road::after {
+  top: 166px;
+  left: -60px;
+  width: 180px;
+  height: 180px;
+  z-index: -1; }
+  @media (max-width: 1439px) {
+    .bikes__item--road::after {
+      top: auto;
+      bottom: 76px;
+      left: -42px;
+      width: 127px;
+      height: 127px; } }
+  @media (max-width: 767px) {
+    .bikes__item--road::after {
+      bottom: 69px;
+      left: -27px; } }
+
+@media (min-width: 1440px) {
+  .bikes__item--mountain::before, .bikes__item--mountain::after {
+    width: 47px;
+    height: 47px;
+    background: url("../../img/icon-rectangle.svg") no-repeat; }
+  .bikes__item--mountain::before {
+    top: 21px;
+    left: -19px; }
+  .bikes__item--mountain::after {
+    bottom: 81px;
+    right: 27px; } }
+
+.bikes__item--kid::after {
+  top: -32px;
+  right: -36px;
+  width: 95px;
+  height: 95px; }
+  @media (max-width: 1439px) {
+    .bikes__item--kid::after {
+      top: -21px;
+      right: -26px;
+      width: 68px;
+      height: 68px; } }
+  @media (max-width: 767px) {
+    .bikes__item--kid::after {
+      top: -22px;
+      right: -14px; } }
+
+.bikes img {
+  padding-bottom: 20px; }
+
+@media (min-width: 1440px) {
+  .bikes__photo--road {
+    padding-top: 10px; }
+  .bikes__photo--mountain {
+    padding-top: 39px; } }
+
+.bikes p {
   margin: 0;
   padding: 0;
   font-size: 22px;
@@ -977,14 +986,14 @@ html {
       padding-top: 77px;
       padding-bottom: 167px; } }
 
-.video__title {
+.video__description-wrapper h2 {
   padding-bottom: 19px;
   color: #ffffff; }
   @media (max-width: 1023px) {
-    .video__title {
+    .video__description-wrapper h2 {
       padding-bottom: 15px; } }
 
-.video__text {
+.video__description-wrapper p {
   margin: 0;
   padding: 0;
   max-width: 340px;
@@ -993,7 +1002,7 @@ html {
   text-align: center;
   color: rgba(255, 255, 255, 0.7); }
   @media (max-width: 1023px) {
-    .video__text {
+    .video__description-wrapper p {
       max-width: 430px; } }
 
 .video__photo-wrapper {
@@ -1006,10 +1015,10 @@ html {
     .video__photo-wrapper {
       margin-top: -113px; } }
 
-.video__photo {
+.video__photo-wrapper img {
   margin: 0 auto; }
 
-.video__play-btn {
+.video__photo-wrapper button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1026,14 +1035,14 @@ html {
   transition: 0.3s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out; }
-  .video__play-btn:hover, .video__play-btn:focus {
+  .video__photo-wrapper button:hover, .video__photo-wrapper button:focus {
     -webkit-transform: translate(-50%, -50%) scale(1.2);
             transform: translate(-50%, -50%) scale(1.2); }
-  .video__play-btn:active {
+  .video__photo-wrapper button:active {
     -webkit-transform: translate(-50%, -50%) scale(0.8);
             transform: translate(-50%, -50%) scale(0.8); }
   @media (min-width: 768px) and (max-width: 1439px) {
-    .video__play-btn {
+    .video__photo-wrapper button {
       width: 91px;
       height: 91px; } }
 

@@ -13,7 +13,7 @@
   }
 }
 
-.form__text {
+.form p {
   @include reset-indent;
   padding-bottom: 19px;
   font-size: 17px;
@@ -32,11 +32,11 @@
   }
 }
 
-.form__input-wrapper:not(:last-child) {
+.form div:not(:last-child) {
   padding-bottom: 20px;
 }
 
-.form__input {
+.form input {
   width: 100%;
   padding: 14px 20px 10px 30px;
   border: 0;
@@ -58,7 +58,7 @@
   }
 }
 
-.form__btn {
+.form button {
   display: block;
 
   @media (max-width: $mobile-max-width) {

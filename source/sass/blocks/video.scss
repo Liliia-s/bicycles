@@ -22,7 +22,7 @@
   }
 }
 
-.video__title {
+.video__description-wrapper h2 {
   padding-bottom: 19px;
   color: $color-white;
 
@@ -31,7 +31,7 @@
   }
 }
 
-.video__text {
+.video__description-wrapper p {
   @include reset-indent;
   max-width: 340px;
   margin: 0 auto;
@@ -57,11 +57,11 @@
   }
 }
 
-.video__photo {
+.video__photo-wrapper img {
   margin: 0 auto;
 }
 
-.video__play-btn {
+.video__photo-wrapper button {
   position: absolute;
   top: 50%;
   left: 50%;
