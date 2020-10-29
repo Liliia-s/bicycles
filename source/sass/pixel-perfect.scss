@@ -1,23 +1,23 @@
 // ----INDEX-----------------------------------
 
-body {
-  @media (max-width: 321px) {
-    background: url("../img/mobile.jpg") no-repeat;
-    min-height: 3954px;
-    // min-height: 4472px;
-    opacity: 0.2;
-  }
-}
+// body {
+//   @media (max-width: 321px) {
+//     background: url("../img/mobile.jpg") no-repeat;
+//     min-height: 3954px;
+//     // min-height: 4472px;
+//     opacity: 0.2;
+//   }
+// }
 
-@media (min-width: $tablet-width) and (max-width: 768px) {
-  body {
-    background: url("../img/tablet.jpg") no-repeat;
-    // background: url("../img/pixel-perfect-tablet-yellow.jpg") no-repeat;
-    min-height: 3440px;
-    // min-height: 3957px;
-    opacity: 0.2;
-  }
-}
+// @media (min-width: $tablet-width) and (max-width: 768px) {
+//   body {
+//     background: url("../img/tablet.jpg") no-repeat;
+//     // background: url("../img/pixel-perfect-tablet-yellow.jpg") no-repeat;
+//     min-height: 3440px;
+//     // min-height: 3957px;
+//     opacity: 0.2;
+//   }
+// }
 
 // @media (min-width: $desktop-width) {
 //   body {

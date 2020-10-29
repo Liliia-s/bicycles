@@ -331,7 +331,11 @@ img {
   height: auto; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
+
+button {
+  cursor: pointer; }
 
 html {
   -webkit-box-sizing: border-box;
@@ -370,18 +374,6 @@ html {
   font-style: normal;
   font-display: swap;
   src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff"); }
-
-@media (max-width: 321px) {
-  body {
-    background: url("../img/mobile.jpg") no-repeat;
-    min-height: 3954px;
-    opacity: 0.2; } }
-
-@media (min-width: 768px) and (max-width: 768px) {
-  body {
-    background: url("../img/tablet.jpg") no-repeat;
-    min-height: 3440px;
-    opacity: 0.2; } }
 
 .visually-hidden {
   position: absolute;
