@@ -434,16 +434,17 @@ html {
 .site-header__logo-wrapper a {
   padding-top: 20px; }
 
-.site-header__logo-wrapper button {
+.site-header__btn-menu {
   display: none;
   width: 50px;
   height: 50px;
   background-color: transparent;
-  border: none; }
-  .site-header__logo-wrapper button--open {
+  border: none;
+  z-index: 100; }
+  .site-header__btn-menu--open {
     display: block;
     background: url("../../img/icon-menu-open.svg") no-repeat #0ad9c6 50% 50%; }
-  .site-header__logo-wrapper button--close {
+  .site-header__btn-menu--close {
     background: url("../../img/icon-menu-close.svg") no-repeat transparent 50% 50%; }
 
 .site-menu {
