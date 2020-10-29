@@ -309,7 +309,6 @@ template {
 
 body {
   margin: 0;
-  padding: 0;
   min-width: 320px;
   font-style: normal;
   font-size: 16px;
@@ -588,30 +587,28 @@ html {
     .promo__wrapper-logo {
       display: none; } }
 
-.promo__header {
+.promo__wrapper h1 {
   margin: 0;
-  padding: 0;
   padding-bottom: 25px;
   font-size: 46px;
   line-height: 64px;
   font-weight: 700;
   color: #ffffff; }
   @media (max-width: 1023px) {
-    .promo__header {
+    .promo__wrapper h1 {
       padding-bottom: 20px;
       font-size: 30px;
       line-height: 42px;
       text-align: center; } }
 
-.promo__text {
+.promo__wrapper p {
   margin: 0;
-  padding: 0;
   font-size: 20px;
   line-height: 32px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8); }
   @media (max-width: 1023px) {
-    .promo__text {
+    .promo__wrapper p {
       max-width: 450px;
       margin: 0 auto;
       font-size: 18px;
@@ -649,7 +646,6 @@ html {
 
 .form p {
   margin: 0;
-  padding: 0;
   padding-bottom: 19px;
   font-size: 17px;
   font-weight: 600;
@@ -709,7 +705,6 @@ html {
 
 .subtitle {
   margin: 0;
-  padding: 0;
   font-size: 30px;
   line-height: 30px;
   font-weight: 600;
@@ -766,7 +761,7 @@ html {
       -ms-flex-line-pack: center;
           align-content: center; } }
 
-.about li {
+.about__list li {
   position: relative;
   max-width: 263px;
   padding-top: 53px;
@@ -775,18 +770,18 @@ html {
   line-height: 34px;
   text-align: center; }
   @media (max-width: 1439px) {
-    .about li {
+    .about__list li {
       margin-right: 10px; } }
   @media (max-width: 1023px) {
-    .about li {
+    .about__list li {
       margin-right: 10px; } }
   @media (max-width: 767px) {
-    .about li {
+    .about__list li {
       max-width: 100%;
       font-size: 18px;
       margin-right: 0;
       padding-bottom: 37px; } }
-  .about li::before {
+  .about__list li::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -809,9 +804,8 @@ html {
 .about__item--consultation::before {
   content: "04"; }
 
-.about p {
-  margin: 0;
-  padding: 0; }
+.about__item p {
+  margin: 0; }
 
 .bikes {
   position: relative;
@@ -830,17 +824,17 @@ html {
       padding-bottom: 11px; } }
 
 @media (min-width: 1440px) {
-  .bikes div {
+  .bikes__wrapper {
     padding-right: 157px;
     padding-left: 157px; } }
 
-.bikes h2 {
+.bikes__wrapper h2 {
   padding-bottom: 50px; }
   @media (max-width: 1023px) {
-    .bikes h2 {
+    .bikes__wrapper h2 {
       padding-bottom: 30px; } }
 
-.bikes ul {
+.bikes__wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -853,31 +847,31 @@ html {
       -ms-flex-pack: center;
           justify-content: center; }
   @media (max-width: 767px) {
-    .bikes ul {
+    .bikes__wrapper ul {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
 
-.bikes li {
+.bikes__list li {
   position: relative;
   padding-bottom: 50px; }
-  .bikes li::after {
+  .bikes__list li::after {
     content: "";
     position: absolute; }
-  .bikes li::before {
+  .bikes__list li::before {
     content: "";
     position: absolute; }
-  .bikes li:not(:last-child) {
+  .bikes__list li:not(:last-child) {
     padding-right: 49px; }
     @media (max-width: 1439px) {
-      .bikes li:not(:last-child) {
+      .bikes__list li:not(:last-child) {
         padding-right: 20px; } }
     @media (max-width: 767px) {
-      .bikes li:not(:last-child) {
+      .bikes__list li:not(:last-child) {
         padding-right: 0; } }
   @media (max-width: 767px) {
-    .bikes li {
+    .bikes__list li {
       -ms-flex-item-align: center;
           align-self: center;
       padding-bottom: 42px; } }
@@ -932,7 +926,7 @@ html {
       top: -22px;
       right: -14px; } }
 
-.bikes img {
+.bikes__item img {
   padding-bottom: 20px; }
 
 @media (min-width: 1440px) {
@@ -941,9 +935,8 @@ html {
   .bikes__photo--mountain {
     padding-top: 39px; } }
 
-.bikes p {
+.bikes__item p {
   margin: 0;
-  padding: 0;
   font-size: 22px;
   line-height: 34px;
   font-weight: 600;
@@ -978,7 +971,6 @@ html {
 
 .video__description-wrapper p {
   margin: 0;
-  padding: 0;
   max-width: 340px;
   margin: 0 auto;
   font-weight: 300;
@@ -1049,18 +1041,17 @@ html {
     margin: 0;
     padding: 0; } }
 
-.site-footer__title {
+.site-footer__description-wrapper h2 {
   padding-bottom: 30px; }
   @media (max-width: 1023px) {
-    .site-footer__title {
+    .site-footer__description-wrapper h2 {
       padding-bottom: 15px; } }
   @media (max-width: 767px) {
-    .site-footer__title {
+    .site-footer__description-wrapper h2 {
       font-size: 18px; } }
 
-.site-footer__text {
+.site-footer__description-wrapper p {
   margin: 0;
-  padding: 0;
   max-width: 552px;
   margin: 0 auto;
   padding-bottom: 40px;
@@ -1069,11 +1060,11 @@ html {
   text-align: center;
   color: rgba(0, 0, 0, 0.7); }
   @media (max-width: 1023px) {
-    .site-footer__text {
+    .site-footer__description-wrapper p {
       max-width: 100%;
       padding-bottom: 20px; } }
   @media (max-width: 767px) {
-    .site-footer__text {
+    .site-footer__description-wrapper p {
       max-width: 254px;
       padding-bottom: 18px; } }
 
@@ -1089,7 +1080,7 @@ html {
     .site-footer__map {
       margin-bottom: 31px; } }
 
-.site-footer__map-iframe {
+.site-footer__map iframe {
   content: "";
   position: absolute;
   top: 0;
@@ -1100,15 +1091,14 @@ html {
   height: 100%;
   display: block; }
 
-.site-footer__map-image {
+.site-footer__map img {
   margin: 0 auto; }
 
 @media (min-width: 768px) {
   .site-footer__list-wrapper {
-    margin: 0;
-    padding: 0; } }
+    margin: 0; } }
 
-.site-footer__list {
+.site-footer__list-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1121,7 +1111,7 @@ html {
       -ms-flex-pack: center;
           justify-content: center; }
   @media (max-width: 767px) {
-    .site-footer__list {
+    .site-footer__list-wrapper ul {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -1129,15 +1119,15 @@ html {
       -ms-flex-line-pack: center;
           align-content: center; } }
 
-.site-footer__item {
+.site-footer__list li {
   padding-bottom: 23px; }
-  .site-footer__item:not(:last-child) {
+  .site-footer__list li:not(:last-child) {
     margin-right: 93px; }
     @media (max-width: 767px) {
-      .site-footer__item:not(:last-child) {
+      .site-footer__list li:not(:last-child) {
         margin-right: 0; } }
   @media (max-width: 767px) {
-    .site-footer__item {
+    .site-footer__list li {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1145,35 +1135,41 @@ html {
           -ms-flex-pack: center;
               justify-content: center; } }
 
-.site-footer__link {
+.site-footer__item a {
   position: relative;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.5); }
-  .site-footer__link--mail {
-    padding-left: 30px; }
-  .site-footer__link--tel {
-    padding-left: 35px; }
-  .site-footer__link:hover, .site-footer__link:focus {
-    color: black; }
-  .site-footer__link:active {
-    opacity: 0.5; }
 
-.site-footer__icon {
+.site-footer__link--mail {
+  padding-left: 30px; }
+
+.site-footer__link--tel {
+  padding-left: 35px; }
+
+.site-footer__link:hover, .site-footer__link:focus {
+  color: black; }
+
+.site-footer__link:active {
+  opacity: 0.5; }
+
+.site-footer__link svg {
   content: "";
   position: absolute;
   top: 0; }
-  .site-footer__icon--mail {
-    left: -15px;
-    width: 26px;
-    height: 20px; }
-    @media (max-width: 767px) {
-      .site-footer__icon--mail {
-        left: -8px; } }
-  .site-footer__icon--tel {
-    left: -3px;
-    width: 22px;
-    height: 25px;
-    fill: none; }
-    @media (max-width: 767px) {
-      .site-footer__icon--tel {
-        left: -11px; } }
+
+.site-footer__icon--mail {
+  left: -15px;
+  width: 26px;
+  height: 20px; }
+  @media (max-width: 767px) {
+    .site-footer__icon--mail {
+      left: -8px; } }
+
+.site-footer__icon--tel {
+  left: -3px;
+  width: 22px;
+  height: 25px;
+  fill: none; }
+  @media (max-width: 767px) {
+    .site-footer__icon--tel {
+      left: -11px; } }

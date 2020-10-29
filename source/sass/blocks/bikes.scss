@@ -18,14 +18,14 @@
   }
 }
 
-.bikes div {
+.bikes__wrapper {
   @media (min-width: $desktop-max-width) {
     padding-right: 157px;
     padding-left: 157px;
   }
 }
 
-.bikes h2 {
+.bikes__wrapper h2 {
   padding-bottom: 50px;
 
   @media (max-width: $tablet-max-width) {
@@ -33,7 +33,7 @@
   }
 }
 
-.bikes ul {
+.bikes__wrapper ul {
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
@@ -44,7 +44,7 @@
   }
 }
 
-.bikes li {
+.bikes__list li {
   position: relative;
   padding-bottom: 50px;
 
@@ -145,7 +145,7 @@
   }
 }
 
-.bikes img {
+.bikes__item img {
   padding-bottom: 20px;
 }
 
@@ -161,7 +161,7 @@
   }
 }
 
-.bikes p {
+.bikes__item p {
   @include reset-indent;
   font-size: 22px;
   line-height: 34px;

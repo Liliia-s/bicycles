@@ -40,7 +40,7 @@
   }
 }
 
-.about li {
+.about__list li {
   position: relative;
   max-width: 263px;
   padding-top: 53px;
@@ -52,7 +52,6 @@
   @media (max-width: $desktop-max-width-2) {
     margin-right: 10px;
   }
-
 
   @media (max-width: $tablet-max-width) {
     margin-right: 10px;
@@ -104,6 +103,6 @@
   }
 }
 
-.about p {
+.about__item p {
   @include reset-indent;
 }

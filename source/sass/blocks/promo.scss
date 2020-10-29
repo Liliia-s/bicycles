@@ -59,7 +59,7 @@
   }
 }
 
-.promo__header {
+.promo__wrapper h1 {
   @include reset-indent;
   padding-bottom: 25px;
   font-size: 46px;
@@ -75,7 +75,7 @@
   }
 }
 
-.promo__text {
+.promo__wrapper p {
   @include reset-indent;
   font-size: 20px;
   line-height: 32px;
