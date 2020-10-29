@@ -17,9 +17,7 @@
     <div class="site-header__wrapper">
       <div class="site-header__logo-wrapper">
         <a class="site-header__logo">
-          <picture>
-            <img src="img/logo.svg" alt="Логотип интернет-магазина велосипедов - Moon">
-          </picture>
+          <img src="img/logo.svg" alt="Логотип интернет-магазина велосипедов - Moon" width="68" height="21">
         </a>
         <button class="site-header__btn-menu" type="button" aria-label="Закрыть меню"></button>
       </div>
@@ -32,13 +30,10 @@
         </ul>
       </nav>
       <section class="site-header__promo promo">
-        div
         <div class="promo__wrapper">
           <div class="promo__wrapper-logo">
             <a class="promo__logo">
-              <picture>
-                <img src="img/logo.svg" alt="Логотип интернет-магазина велосипедов - Moon">
-              </picture>
+              <img src="img/logo.svg" alt="Логотип интернет-магазина велосипедов - Moon" width="68" height="21">
             </a>
           </div>
           <h1 class="promo__header">Мы продаем велосипеды</h1>
@@ -75,30 +70,42 @@
         <ul class="bikes__list">
           <li class="bikes__item bikes__item--road">
             <picture>
+              <!-- 1х: 342px; 2x: 1006px -->
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/bike-road-desktop.webp 1x, img/bike-road-desktop@2x.webp 2x">
+              <!-- 1х: 300px; 2x: 600px -->
               <source type="image/webp" srcset="img/bike-road-mobile-tablet.webp 1x, img/bike-road-mobile-tablet@2x.webp 2x">
 
+              <!-- 1х: 342px; 2x: 1006px -->
               <source media="(min-width: 1440px)" srcset="img/bike-road-desktop.png 1x, img/bike-road-desktop@2x.png 2x">
+              <!-- 1х: 300px; 2x: 600px -->
               <img class="bikes__photo bikes__photo--road" src="img/bike-road-mobile-tablet.png" srcset="img/bike-road-mobile-tablet@2x.png 2x" alt="Дорожный велосипед">
             </picture>
             <p class="bikes__category">Дорожный велосипед</p>
           </li>
           <li class="bikes__item bikes__item--mountain">
             <picture>
+              <!-- 1х: 342px; 2x: 1006px -->
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/bike-mountain-desktop.webp 1x, img/bike-mountain-desktop@2x.webp 2x">
+              <!-- 1х: 300px; 2x: 600px -->
               <source type="image/webp" srcset="img/bike-mountain-mobile-tablet.webp 1x, img/bike-mountain-mobile-tablet@2x.webp 2x">
 
+              <!-- 1х: 342px; 2x: 1006px -->
               <source media="(min-width: 1440px)" srcset="img/bike-mountain-desktop.png 1x, img/bike-mountain-desktop@2x.png 2x">
+              <!-- 1х: 300px; 2x: 600px -->
               <img class="bikes__photo bikes__photo--mountain" src="img/bike-mountain-mobile-tablet.png" srcset="img/bike-mountain-mobile-tablet@2x.png 2x" alt="Горный велосипед">
             </picture>
             <p class="bikes__category">Горный велосипед</p>
           </li>
           <li class="bikes__item bikes__item--kid">
             <picture>
+              <!-- 1х: 342px; 2x: 1006px -->
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/bike-kid-desktop.webp 1x, img/bike-kid-desktop@2x.webp 2x">
+              <!-- 1х: 300px; 2x: 600px -->
               <source type="image/webp" srcset="img/bike-kid-mobile-tablet.webp 1x, img/bike-kid-mobile-tablet@2x.webp 2x">
 
+              <!-- 1х: 342px; 2x: 1006px -->
               <source media="(min-width: 1440px)" srcset="img/bike-kid-desktop.png 1x, img/bike-kid-desktop@2x.png 2x">
+              <!-- 1х: 300px; 2x: 600px -->
               <img class="bikes__photo bikes__photo--kid" src="img/bike-kid-mobile-tablet.png" srcset="img/bike-kid-mobile-tablet@2x.png 2x" alt="Детский велосипед">
             </picture>
             <p class="bikes__category">Детский велосипед</p>
@@ -115,12 +122,18 @@
       </div>
       <div class="video__photo-wrapper container">
         <picture>
+          <!-- 1х: 929px; 2x: 1858px -->
           <source type="image/webp" media="(min-width: 1024px)" srcset="img/video-bike-desktop.webp 1x, img/video-bike-desktop@2x.webp 2x">
+          <!-- 1х: 503px; 2x: 1006px -->
           <source type="image/webp" media="(min-width: 768px)" srcset="img/video-bike-tablet.webp 1x, img/video-bike-tablet@2x.webp 2x">
+          <!-- 1х: 288px; 2x: 576px -->
           <source type="image/webp" srcset="img/video-bike-mobile.webp 1x, img/video-bike-mobile@2x.webp 2x">
 
+          <!-- 1х: 929px; 2x: 1858px -->
           <source media="(min-width: 1024px)" srcset="img/video-bike-desktop.png 1x, img/video-bike-desktop@2x.png 2x">
+          <!-- 1х: 503px; 2x: 1006px -->
           <source media="(min-width: 768px)" srcset="img/video-bike-tablet.png 1x, img/video-bike-tablet@2x.png 2x">
+          <!-- 1х: 288px; 2x: 576px -->
           <img class="video__photo" src="img/video-bike-mobile.png" srcset="img/video-bike-mobile@2x.png 2x" alt="Видео про велосипеды">
         </picture>
         <button class="video__play-btn" type="button" aria-label="Кнопка для воспроизведения видео">
@@ -136,12 +149,18 @@
     <div class="site-footer__map">
       <iframe class="site-footer__map-iframe" src="https://www.google.ru/maps/d/embed?mid=1NiERkeAQxdjzrdMQ0gcSNCqIagpv5r_j&hl=ru"></iframe>
       <picture>
+        <!-- 1х: 957px; 2x: 1914px -->
         <source type="image/webp" media="(min-width: 1024px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+        <!-- 1х: 698px; 2x: 1396px -->
         <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+        <!-- 1х: 319px; 2x: 638px -->
         <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
 
+        <!-- 1х: 957px; 2x: 1914px -->
         <source media="(min-width: 1024px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+        <!-- 1х: 698px; 2x: 1396px -->
         <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+        <!-- 1х: 319px; 2x: 638px -->
         <img class="site-footer__map-image" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" alt="Схема проезда к интернет-магазину Moon по адресу ул. Большая Конюшенная, д. 19">
       </picture>
     </div>
@@ -162,7 +181,7 @@
       </ul>
     </div>
   </footer>
-  <script src="https://unpkg.com/imask"></script>
+  <script src="js/imask.js"></script>
   <script src="js/main.js"></script>
 </body>
 
