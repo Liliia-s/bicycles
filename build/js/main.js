@@ -1,13 +1,13 @@
 'use strict';
 
 (function () {
-  let header = document.querySelector('.site-header');
-  let menu = header.querySelector('.site-menu');
-  let promoWrap = header.querySelector('.promo__wrapper');
-  let logoWrapper = header.querySelector('.site-header__logo-wrapper');
-  let buttonMenu = header.querySelector('.site-header__btn-menu');
+  var header = document.querySelector('.site-header');
+  var menu = header.querySelector('.site-menu');
+  var promoWrap = header.querySelector('.promo__wrapper');
+  var logoWrapper = header.querySelector('.site-header__logo-wrapper');
+  var buttonMenu = header.querySelector('.site-header__btn-menu');
 
-  let hideMenu = function () {
+  var hideMenu = function () {
     menu.classList.toggle('site-menu--hide');
     promoWrap.classList.toggle('promo__wrapper--indents');
     logoWrapper.classList.toggle('site-header__logo-wrapper--indent');
@@ -16,7 +16,7 @@
 
   hideMenu();
 
-  let onButtonMenuClick = function () {
+  var onButtonMenuClick = function () {
     hideMenu();
     buttonMenu.classList.toggle('site-header__btn-menu--close');
   };
@@ -25,9 +25,13 @@
 })();
 
 (function () {
-  let inputTel = document.getElementById('field-tel');
+  var inputTel = document.getElementById('field-tel');
 
-  let phoneMask = IMask(inputTel, {
-    mask: '+{7} (000) 000 - 00 - 00'
-  });
+  var phoneMask = function () {
+    window.iMask.setiMask(inputTel, {
+      mask: '+{7} (000) 000 - 00 - 00'
+    });
+  };
+
+  phoneMask();
 })();

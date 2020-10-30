@@ -2,22 +2,22 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
-      (global = global || self, factory(global.IMask = {}));
+      (global = global || self, factory(global.iMask = {}));
 }(this, (function (exports) {
 
   var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
   function createCommonjsModule(fn, module) {
-    return module = {exports: {}}, fn(module, module.exports), module.exports;
+    return module = { exports: {} }, fn(module, module.exports), module.exports;
   }
 
   var check = function (it) {
     return it && it.Math == Math && it;
-  }; 
+  };
 
 
-  var global_1 = 
-    check(typeof globalThis === 'object' && globalThis) || check(typeof window === 'object' && window) || check(typeof self === 'object' && self) || check(typeof commonjsGlobal === 'object' && commonjsGlobal) || 
+  var global_1 =
+    check(typeof globalThis === 'object' && globalThis) || check(typeof window === 'object' && window) || check(typeof self === 'object' && self) || check(typeof commonjsGlobal === 'object' && commonjsGlobal) ||
     Function('return this')();
 
   var fails = function (exec) {
@@ -39,11 +39,11 @@
   });
 
   var nativePropertyIsEnumerable = {}.propertyIsEnumerable;
-  var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor; 
+  var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
   var NASHORN_BUG = getOwnPropertyDescriptor && !nativePropertyIsEnumerable.call({
     1: 2
-  }, 1); 
+  }, 1);
 
   var f = NASHORN_BUG ? function propertyIsEnumerable(V) {
     var descriptor = getOwnPropertyDescriptor(this, V);
@@ -69,13 +69,13 @@
     return toString.call(it).slice(8, -1);
   };
 
-  var split = ''.split; 
+  var split = ''.split;
 
   var indexedObject = fails(function () {
     return !Object('z').propertyIsEnumerable(0);
   }) ? function (it) {
-      return classofRaw(it) == 'String' ? split.call(it, '') : Object(it);
-    } : Object;
+    return classofRaw(it) == 'String' ? split.call(it, '') : Object(it);
+  } : Object;
 
   var requireObjectCoercible = function (it) {
     if (it == undefined) {
@@ -119,7 +119,7 @@
     return hasOwnProperty.call(it, key);
   };
 
-  var document$1 = global_1.document; 
+  var document$1 = global_1.document;
 
   var EXISTS = isObject(document$1) && isObject(document$1.createElement);
 
@@ -137,7 +137,7 @@
     }).a != 7;
   });
 
-  var nativeGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor; 
+  var nativeGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
   var f$1 = descriptors ? nativeGetOwnPropertyDescriptor : function getOwnPropertyDescriptor(O, P) {
     O = toIndexedObject(O);
@@ -165,7 +165,7 @@
     return it;
   };
 
-  var nativeDefineProperty = Object.defineProperty; 
+  var nativeDefineProperty = Object.defineProperty;
 
   var f$2 = descriptors ? nativeDefineProperty : function defineProperty(O, P, Attributes) {
     anObject(O);
@@ -211,7 +211,7 @@
   var store = global_1[SHARED] || setGlobal(SHARED, {});
   var sharedStore = store;
 
-  var functionToString = Function.toString; 
+  var functionToString = Function.toString;
 
   if (typeof sharedStore.inspectSource !== 'function') {
     sharedStore.inspectSource = function (it) {
@@ -345,7 +345,7 @@
         O[key] = value;
       } else {
         createNonEnumerableProperty(O, key, value);
-      } 
+      }
     })(Function.prototype, 'toString', function toString() {
       return typeof this === 'function' && getInternalState(this).source || inspectSource(this);
     });
@@ -362,20 +362,20 @@
   };
 
   var ceil = Math.ceil;
-  var floor = Math.floor; 
+  var floor = Math.floor;
 
   var toInteger = function (argument) {
     return isNaN(argument = +argument) ? 0 : (argument > 0 ? floor : ceil)(argument);
   };
 
-  var min = Math.min; 
+  var min = Math.min;
 
   var toLength = function (argument) {
-    return argument > 0 ? min(toInteger(argument), 0x1FFFFFFFFFFFFF) : 0; 
+    return argument > 0 ? min(toInteger(argument), 0x1FFFFFFFFFFFFF) : 0;
   };
 
   var max = Math.max;
-  var min$1 = Math.min; 
+  var min$1 = Math.min;
 
   var toAbsoluteIndex = function (index, length) {
     var integer = toInteger(index);
@@ -389,15 +389,15 @@
       var O = toIndexedObject($this);
       var length = toLength(O.length);
       var index = toAbsoluteIndex(fromIndex, length);
-      var value; 
+      var value;
 
       if (IS_INCLUDES && el != el) {
         while (length > index) {
-          value = O[index++]; 
+          value = O[index++];
 
           if (value != value) {
             return true;
-          } 
+          }
         }
       } else {
         for (; length > index; index++) {
@@ -426,7 +426,7 @@
 
     for (key in O) {
       !has(hiddenKeys, key) && has(O, key) && result.push(key);
-    } 
+    }
 
 
     while (names.length > i) {
@@ -440,7 +440,7 @@
 
   var enumBugKeys = ['constructor', 'hasOwnProperty', 'isPrototypeOf', 'propertyIsEnumerable', 'toLocaleString', 'toString', 'valueOf'];
 
-  var hiddenKeys$1 = enumBugKeys.concat('length', 'prototype'); 
+  var hiddenKeys$1 = enumBugKeys.concat('length', 'prototype');
 
   var f$3 = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
     return objectKeysInternal(O, hiddenKeys$1);
@@ -523,19 +523,19 @@
           targetProperty = target[key];
         }
 
-        FORCED = isForced_1(GLOBAL ? key : TARGET + (STATIC ? '.' : '#') + key, options.forced); 
+        FORCED = isForced_1(GLOBAL ? key : TARGET + (STATIC ? '.' : '#') + key, options.forced);
 
         if (!FORCED && targetProperty !== undefined) {
           if (typeof sourceProperty === typeof targetProperty) {
             continue;
           }
           copyConstructorProperties(sourceProperty, targetProperty);
-        } 
+        }
 
 
         if (options.sham || targetProperty && targetProperty.sham) {
           createNonEnumerableProperty(sourceProperty, 'sham', true);
-        } 
+        }
 
 
         redefine(target, key, sourceProperty, options);
@@ -556,7 +556,7 @@
   };
 
   var nativeAssign = Object.assign;
-  var defineProperty = Object.defineProperty; 
+  var defineProperty = Object.defineProperty;
 
   var objectAssign = !nativeAssign || fails(function () {
     if (descriptors && nativeAssign({
@@ -573,10 +573,10 @@
       b: 2
     })).b !== 1) {
       return true;
-    } 
+    }
 
     var A = {};
-    var B = {}; 
+    var B = {};
 
     var symbol = Symbol();
     var alphabet = 'abcdefghijklmnopqrst';
@@ -586,29 +586,29 @@
     });
     return nativeAssign({}, A)[symbol] != 7 || objectKeys(nativeAssign({}, B)).join('') != alphabet;
   }) ? function assign(target, source) {
-      var T = toObject(target);
-      var argumentsLength = arguments.length;
-      var index = 1;
-      var getOwnPropertySymbols = objectGetOwnPropertySymbols.f;
-      var propertyIsEnumerable = objectPropertyIsEnumerable.f;
+    var T = toObject(target);
+    var argumentsLength = arguments.length;
+    var index = 1;
+    var getOwnPropertySymbols = objectGetOwnPropertySymbols.f;
+    var propertyIsEnumerable = objectPropertyIsEnumerable.f;
 
-      while (argumentsLength > index) {
-        var S = indexedObject(arguments[index++]);
-        var keys = getOwnPropertySymbols ? objectKeys(S).concat(getOwnPropertySymbols(S)) : objectKeys(S);
-        var length = keys.length;
-        var j = 0;
-        var key;
+    while (argumentsLength > index) {
+      var S = indexedObject(arguments[index++]);
+      var keys = getOwnPropertySymbols ? objectKeys(S).concat(getOwnPropertySymbols(S)) : objectKeys(S);
+      var length = keys.length;
+      var j = 0;
+      var key;
 
-        while (length > j) {
-          key = keys[j++];
-          if (!descriptors || propertyIsEnumerable.call(S, key)) {
-            T[key] = S[key];
-          }
+      while (length > j) {
+        key = keys[j++];
+        if (!descriptors || propertyIsEnumerable.call(S, key)) {
+          T[key] = S[key];
         }
       }
+    }
 
-      return T;
-    } : nativeAssign;
+    return T;
+  } : nativeAssign;
 
 
 
@@ -641,7 +641,7 @@
 
 
 
-  var ceil$1 = Math.ceil; 
+  var ceil$1 = Math.ceil;
 
   var createMethod$1 = function (IS_END) {
     return function ($this, maxLength, fillString) {
@@ -1035,7 +1035,7 @@
 
   function escapeRegExp(str) {
     return str.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
-  } 
+  }
 
   function objectIncludes(b, a) {
     if (a === b) {
@@ -1080,7 +1080,7 @@
       if (regexpA != regexpB) {
         return false;
       }
-      var keys = Object.keys(a); 
+      var keys = Object.keys(a);
 
       for (i = 0; i < keys.length; i++) {
         if (!Object.prototype.hasOwnProperty.call(b, keys[i])) {
@@ -1114,7 +1114,7 @@
         this.value = value;
         this.cursorPos = cursorPos;
         this.oldValue = oldValue;
-        this.oldSelection = oldSelection; 
+        this.oldSelection = oldSelection;
 
         while (this.value.slice(0, this.startChangePos) !== this.oldValue.slice(0, this.startChangePos)) {
           --this.oldSelection.start;
@@ -1143,7 +1143,7 @@
       }, {
         key: 'removedCount',
         get: function get() {
-          return Math.max(this.oldSelection.end - this.startChangePos || 
+          return Math.max(this.oldSelection.end - this.startChangePos ||
             this.oldValue.length - this.value.length, 0);
         }
 
@@ -1170,7 +1170,7 @@
         get: function get() {
           if (!this.removedCount || this.insertedCount) {
             return DIRECTION.NONE;
-          } 
+          }
 
           return this.oldSelection.end === this.cursorPos || this.oldSelection.start === this.cursorPos ? DIRECTION.RIGHT : DIRECTION.LEFT;
         }
@@ -1276,9 +1276,9 @@
       return ContinuousTailDetails;
     }();
 
-  function IMask(el) {
+  function iMask(el) {
     var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-    return new IMask.InputMask(el, opts);
+    return new iMask.InputMask(el, opts);
   }
 
 
@@ -1407,12 +1407,12 @@
               }
 
               var tailDetails = this.appendTail(checkTail);
-              appended = tailDetails.rawInserted === checkTail.toString(); 
+              appended = tailDetails.rawInserted === checkTail.toString();
 
               if (appended && tailDetails.inserted) {
                 this.state = beforeTailState;
               }
-            } 
+            }
 
 
             if (!appended) {
@@ -1447,11 +1447,11 @@
 
           for (var ci = 0; ci < str.length; ++ci) {
             details.aggregate(this._appendChar(str[ci], flags, checkTail));
-          } 
+          }
 
 
           if (checkTail != null) {
-            details.tailShift += this.appendTail(checkTail).tailShift; 
+            details.tailShift += this.appendTail(checkTail).tailShift;
           }
 
           return details;
@@ -1476,7 +1476,7 @@
           var rawInput = this.rawInputValue;
           var value = this.value;
           var ret = fn();
-          this.rawInputValue = rawInput; 
+          this.rawInputValue = rawInput;
 
           if (this.value !== value && value.indexOf(this.value) === 0) {
             this.append(value.slice(this.value.length), {}, '');
@@ -1540,7 +1540,7 @@
           var tail = this.extractTail(tailPos);
           var startChangePos = this.nearestInputPos(start, removeDirection);
           var changeDetails = new ChangeDetails({
-            tailShift: startChangePos - start 
+            tailShift: startChangePos - start
 
           }).aggregate(this.remove(startChangePos)).aggregate(this.append(inserted, {
             input: true
@@ -1617,59 +1617,59 @@
       return v;
     }
   };
-  IMask.Masked = Masked;
+  iMask.Masked = Masked;
 
 
   function maskedClass(mask) {
     if (mask == null) {
       throw new Error('mask property should be defined');
-    } 
+    }
 
 
     if (mask instanceof RegExp) {
-      return IMask.MaskedRegExp;
-    } 
+      return iMask.MaskedRegExp;
+    }
 
     if (isString(mask)) {
-      return IMask.MaskedPattern;
-    } 
+      return iMask.MaskedPattern;
+    }
 
     if (mask instanceof Date || mask === Date) {
-      return IMask.MaskedDate;
-    } 
+      return iMask.MaskedDate;
+    }
 
     if (mask instanceof Number || typeof mask === 'number' || mask === Number) {
-      return IMask.MaskedNumber;
-    } 
+      return iMask.MaskedNumber;
+    }
 
     if (Array.isArray(mask) || mask === Array) {
-      return IMask.MaskedDynamic;
-    } 
+      return iMask.MaskedDynamic;
+    }
 
-    if (IMask.Masked && mask.prototype instanceof IMask.Masked) {
+    if (iMask.Masked && mask.prototype instanceof iMask.Masked) {
       return mask;
-    } 
+    }
 
     if (mask instanceof Function) {
-      return IMask.MaskedFunction;
-    } 
+      return iMask.MaskedFunction;
+    }
 
-    if (mask instanceof IMask.Masked) {
+    if (mask instanceof iMask.Masked) {
       return mask.constructor;
     }
-    console.warn('Mask not found for mask', mask); 
+    console.warn('Mask not found for mask', mask);
 
-    return IMask.Masked;
+    return iMask.Masked;
   }
 
   function createMask(opts) {
-    if (IMask.Masked && opts instanceof IMask.Masked) {
+    if (iMask.Masked && opts instanceof iMask.Masked) {
       return opts;
     }
     opts = Object.assign({}, opts);
-    var mask = opts.mask; 
+    var mask = opts.mask;
 
-    if (IMask.Masked && mask instanceof IMask.Masked) {
+    if (iMask.Masked && mask instanceof iMask.Masked) {
       return mask;
     }
     var MaskedClass = maskedClass(mask);
@@ -1678,7 +1678,7 @@
     }
     return new MaskedClass(opts);
   }
-  IMask.createMask = createMask;
+  iMask.createMask = createMask;
 
   var DEFAULT_INPUT_DEFINITIONS = {
     '0': /\d/,
@@ -1731,7 +1731,7 @@
           if (this._isFilled) {
             return new ChangeDetails();
           }
-          var state = this.masked.state; 
+          var state = this.masked.state;
 
           var details = this.masked._appendChar(str, flags);
 
@@ -1942,7 +1942,7 @@
         value: function extractTail() {
           var toPos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.value.length;
           return new ContinuousTailDetails('');
-        } 
+        }
 
       }, {
         key: 'appendTail',
@@ -2013,7 +2013,7 @@
         key: 'toString',
         value: function toString() {
           return this.chunks.map(String).join('');
-        } 
+        }
 
       }, {
         key: 'extend',
@@ -2025,8 +2025,8 @@
             tailChunk = new ContinuousTailDetails(String(tailChunk));
           }
           var lastChunk = this.chunks[this.chunks.length - 1];
-          var extendLast = lastChunk && ( 
-            lastChunk.stop === tailChunk.stop || tailChunk.stop == null) && 
+          var extendLast = lastChunk && (
+            lastChunk.stop === tailChunk.stop || tailChunk.stop == null) &&
             tailChunk.from === lastChunk.from + lastChunk.toString().length;
 
           if (tailChunk instanceof ContinuousTailDetails) {
@@ -2044,7 +2044,7 @@
                 firstTailChunk.from += tailChunk.from;
                 this.extend(firstTailChunk);
               }
-            } 
+            }
 
 
             if (tailChunk.toString()) {
@@ -2056,7 +2056,7 @@
       }, {
         key: 'appendTo',
         value: function appendTo(masked) {
-          if (!(masked instanceof IMask.MaskedPattern)) {
+          if (!(masked instanceof iMask.MaskedPattern)) {
             var tail = new ContinuousTailDetails(this.toString());
             return tail.appendTo(masked);
           }
@@ -2071,9 +2071,9 @@
             var stop = chunk.stop;
             var chunkBlock = void 0;
 
-            if (stop != null && ( 
+            if (stop != null && (
               !lastBlockIter || lastBlockIter.index <= stop)) {
-              if (chunk instanceof ChunksTailDetails || 
+              if (chunk instanceof ChunksTailDetails ||
                 masked._stops.indexOf(stop) >= 0) {
                 details.aggregate(masked._appendPlaceholder(stop));
               }
@@ -2083,10 +2083,10 @@
 
             if (chunkBlock) {
               var tailDetails = chunkBlock.appendTail(chunk);
-              tailDetails.skip = false; 
+              tailDetails.skip = false;
 
               details.aggregate(tailDetails);
-              masked._value += tailDetails.inserted; 
+              masked._value += tailDetails.inserted;
 
               var remainChars = chunk.toString().slice(tailDetails.rawInserted.length);
               if (remainChars) {
@@ -2149,7 +2149,7 @@
 
           Object.assign(this, props);
           this.chunks = chunks.map(function (cstate) {
-            var chunk = 'chunks' in cstate ? new ChunksTailDetails() : new ContinuousTailDetails(); 
+            var chunk = 'chunks' in cstate ? new ChunksTailDetails() : new ContinuousTailDetails();
 
             chunk.state = cstate;
             return chunk;
@@ -2187,7 +2187,7 @@
 
       return MaskedRegExp;
     }(Masked);
-  IMask.MaskedRegExp = MaskedRegExp;
+  iMask.MaskedRegExp = MaskedRegExp;
 
   var MaskedPattern =
     function (_Masked) {
@@ -2239,11 +2239,11 @@
                 var p = pattern.slice(i);
                 var bNames = Object.keys(_this.blocks).filter(function (bName) {
                   return p.indexOf(bName) === 0;
-                }); 
+                });
 
                 bNames.sort(function (a, b) {
                   return b.length - a.length;
-                }); 
+                });
 
                 var bName = bNames[0];
 
@@ -2256,7 +2256,7 @@
                   }, _this.blocks[bName]));
 
                   if (maskedBlock) {
-                    _this._blocks.push(maskedBlock); 
+                    _this._blocks.push(maskedBlock);
 
 
                     if (!_this._maskedBlocks[bName]) {
@@ -2374,7 +2374,7 @@
             details.aggregate(blockDetails);
             if (skip || blockDetails.rawInserted) {
               break;
-            } 
+            }
           }
 
           return details;
@@ -2507,7 +2507,7 @@
           var fromBlockIter = this._mapPosToBlock(fromPos);
 
           if (fromBlockIter) {
-            var toBlockIter = this._mapPosToBlock(toPos); 
+            var toBlockIter = this._mapPosToBlock(toPos);
 
 
             var isSameBlock = toBlockIter && fromBlockIter.index === toBlockIter.index;
@@ -2518,7 +2518,7 @@
             if (toBlockIter && !isSameBlock) {
               for (var bi = fromBlockIter.index + 1; bi < toBlockIter.index; ++bi) {
                 fn(this._blocks[bi], bi, 0, this._blocks[bi].value.length);
-              } 
+              }
 
 
               fn(this._blocks[toBlockIter.index], toBlockIter.index, 0, toBlockIter.offset);
@@ -2555,14 +2555,14 @@
           if (!beginBlock) {
             return cursorPos;
           }
-          var beginBlockCursorPos = beginBlockOffset; 
+          var beginBlockCursorPos = beginBlockOffset;
 
           if (beginBlockCursorPos !== 0 && beginBlockCursorPos < beginBlock.value.length) {
             beginBlockCursorPos = beginBlock.nearestInputPos(beginBlockOffset, forceDirection(direction));
           }
 
           var cursorAtRight = beginBlockCursorPos === beginBlock.value.length;
-          var cursorAtLeft = beginBlockCursorPos === 0; 
+          var cursorAtLeft = beginBlockCursorPos === 0;
 
           if (!cursorAtLeft && !cursorAtRight) {
             return this._blockStartPos(beginBlockIndex) + beginBlockCursorPos;
@@ -2573,12 +2573,12 @@
             if (searchBlockIndex > 0) {
               var blockIndexAtLeft = searchBlockIndex - 1;
               var blockAtLeft = this._blocks[blockIndexAtLeft];
-              var blockInputPos = blockAtLeft.nearestInputPos(0, DIRECTION.NONE); 
+              var blockInputPos = blockAtLeft.nearestInputPos(0, DIRECTION.NONE);
 
               if (!blockAtLeft.value.length || blockInputPos !== blockAtLeft.value.length) {
                 return this._blockStartPos(searchBlockIndex);
               }
-            } 
+            }
 
 
             var firstInputAtRight = searchBlockIndex;
@@ -2591,13 +2591,13 @@
               if (!blockAtRight.value.length || _blockInputPos !== blockAtRight.value.length) {
                 return this._blockStartPos(bi) + _blockInputPos;
               }
-            } 
+            }
 
 
             for (var _bi = searchBlockIndex - 1; _bi >= 0; --_bi) {
               var _block3 = this._blocks[_bi];
 
-              var _blockInputPos2 = _block3.nearestInputPos(0, DIRECTION.NONE); 
+              var _blockInputPos2 = _block3.nearestInputPos(0, DIRECTION.NONE);
 
 
               if (!_block3.value.length || _blockInputPos2 !== _block3.value.length) {
@@ -2626,11 +2626,11 @@
               if (_blockInputPos3 === 0 && filledBlock.unmaskedValue.length) {
                 return this._blockStartPos(firstFilledBlockIndexAtRight) + _blockInputPos3;
               }
-            } 
+            }
 
 
             var firstFilledInputBlockIndex = -1;
-            var firstEmptyInputBlockIndex; 
+            var firstEmptyInputBlockIndex;
 
             for (var _bi3 = searchBlockIndex - 1; _bi3 >= 0; --_bi3) {
               var _block4 = this._blocks[_bi3];
@@ -2661,18 +2661,18 @@
 
                 if (blockAlignedPos > cursorPos) {
                   break;
-                } 
+                }
 
                 if (_blockInputPos5 !== _block5.value.length) {
                   return blockAlignedPos;
                 }
               }
-            } 
+            }
 
 
             if (firstFilledInputBlockIndex >= 0) {
               return this._blockStartPos(firstFilledInputBlockIndex) + this._blocks[firstFilledInputBlockIndex].value.length;
-            } 
+            }
 
 
             if (direction === DIRECTION.FORCE_LEFT || this.lazy && !this.extractInput() && !isInput(this._blocks[searchBlockIndex])) {
@@ -2681,13 +2681,13 @@
 
             if (firstEmptyInputBlockIndex != null) {
               return this._blockStartPos(firstEmptyInputBlockIndex);
-            } 
+            }
 
 
             for (var _bi5 = searchBlockIndex; _bi5 < this._blocks.length; ++_bi5) {
               var _block6 = this._blocks[_bi5];
 
-              var _blockInputPos6 = _block6.nearestInputPos(0, DIRECTION.NONE); 
+              var _blockInputPos6 = _block6.nearestInputPos(0, DIRECTION.NONE);
 
 
               if (!_block6.value.length || _blockInputPos6 !== _block6.value.length) {
@@ -2834,7 +2834,7 @@
     return !value || block.nearestInputPos(0, DIRECTION.NONE) !== value.length;
   }
 
-  IMask.MaskedPattern = MaskedPattern;
+  iMask.MaskedPattern = MaskedPattern;
 
 
   var MaskedRange =
@@ -2967,7 +2967,7 @@
 
       return MaskedRange;
     }(MaskedPattern);
-  IMask.MaskedRange = MaskedRange;
+  iMask.MaskedRange = MaskedRange;
 
 
   var MaskedDate =
@@ -2995,7 +2995,7 @@
             opts.mask = opts.pattern;
           }
           var blocks = opts.blocks;
-          opts.blocks = Object.assign({}, MaskedDate.GET_DEFAULT_BLOCKS()); 
+          opts.blocks = Object.assign({}, MaskedDate.GET_DEFAULT_BLOCKS());
 
           if (opts.min) {
             opts.blocks.Y.from = opts.min.getFullYear();
@@ -3014,7 +3014,7 @@
             }
           }
 
-          Object.assign(opts.blocks, blocks); 
+          Object.assign(opts.blocks, blocks);
 
           Object.keys(opts.blocks).forEach(function (bk) {
             var b = opts.blocks[bk];
@@ -3108,7 +3108,7 @@
     };
   };
 
-  IMask.MaskedDate = MaskedDate;
+  iMask.MaskedDate = MaskedDate;
 
   var MaskElement =
     function () {
@@ -3177,7 +3177,7 @@
 
       return MaskElement;
     }();
-  IMask.MaskElement = MaskElement;
+  iMask.MaskElement = MaskElement;
 
 
   var HTMLMaskElement =
@@ -3282,7 +3282,7 @@
     focus: 'focus',
     commit: 'blur'
   };
-  IMask.HTMLMaskElement = HTMLMaskElement;
+  iMask.HTMLMaskElement = HTMLMaskElement;
 
   var HTMLContenteditableMaskElement =
     function (_HTMLMaskElement) {
@@ -3341,7 +3341,7 @@
 
       return HTMLContenteditableMaskElement;
     }(HTMLMaskElement);
-  IMask.HTMLContenteditableMaskElement = HTMLContenteditableMaskElement;
+  iMask.HTMLContenteditableMaskElement = HTMLContenteditableMaskElement;
 
 
   var InputMask =
@@ -3365,7 +3365,7 @@
         this.alignCursor = this.alignCursor.bind(this);
         this.alignCursorFriendly = this.alignCursorFriendly.bind(this);
 
-        this._bindEvents(); 
+        this._bindEvents();
 
 
         this.updateValue();
@@ -3420,10 +3420,9 @@
       }, {
         key: '_saveSelection',
 
-        value: function _saveSelection()
- {
+        value: function _saveSelection() {
           if (this.value !== this.el.value) {
-            console.warn('Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly.'); 
+            console.warn('Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly.');
           }
 
           this._selection = {
@@ -3480,7 +3479,7 @@
           if (cursorPos == null) {
             return;
           }
-          this.cursorPos = cursorPos; 
+          this.cursorPos = cursorPos;
 
           this._delayUpdateCursor(cursorPos);
         }
@@ -3496,7 +3495,7 @@
           this._cursorChanging = setTimeout(function () {
             if (!_this.el) {
               return;
-            } 
+            }
 
             _this.cursorPos = _this._changingCursorPos;
 
@@ -3534,7 +3533,7 @@
         value: function alignCursorFriendly() {
           if (this.selectionStart !== this.cursorPos) {
             return;
-          } 
+          }
 
           this.alignCursor();
         }
@@ -3576,17 +3575,17 @@
         value: function _onInput(e) {
           this._inputEvent = e;
 
-          this._abortUpdateCursor(); 
+          this._abortUpdateCursor();
 
 
           if (!this._selection) {
             return this.updateValue();
           }
-          var details = new ActionDetails( 
-              this.el.value, this.cursorPos, 
-              this.value, this._selection);
+          var details = new ActionDetails(
+            this.el.value, this.cursorPos,
+            this.value, this._selection);
           var oldRawValue = this.masked.rawInputValue;
-          var offset = this.masked.splice(details.startChangePos, details.removed.length, details.inserted, details.removeDirection).offset; 
+          var offset = this.masked.splice(details.startChangePos, details.removed.length, details.inserted, details.removeDirection).offset;
 
           var removeDirection = oldRawValue === this.masked.rawInputValue ? details.removeDirection : DIRECTION.NONE;
           var cursorPos = this.masked.nearestInputPos(details.startChangePos + offset, removeDirection);
@@ -3630,10 +3629,10 @@
       }, {
         key: 'destroy',
         value: function destroy() {
-          this._unbindEvents(); 
+          this._unbindEvents();
 
 
-          this._listeners.length = 0; 
+          this._listeners.length = 0;
 
           delete this.el;
         }
@@ -3647,7 +3646,7 @@
             return;
           }
 
-          if (!(mask instanceof IMask.Masked) && this.masked.constructor === maskedClass(mask)) {
+          if (!(mask instanceof iMask.Masked) && this.masked.constructor === maskedClass(mask)) {
             this.masked.updateOptions({
               mask: mask
             });
@@ -3716,7 +3715,7 @@
 
       return InputMask;
     }();
-  IMask.InputMask = InputMask;
+  iMask.InputMask = InputMask;
 
 
   var MaskedEnum =
@@ -3758,7 +3757,7 @@
 
       return MaskedEnum;
     }(MaskedPattern);
-  IMask.MaskedEnum = MaskedEnum;
+  iMask.MaskedEnum = MaskedEnum;
 
   var MaskedNumber =
     function (_Masked) {
@@ -3959,29 +3958,29 @@
             case DIRECTION.NONE:
             case DIRECTION.LEFT:
             case DIRECTION.FORCE_LEFT:
-            {
-              var separatorAtLeftPos = this._findSeparatorAround(cursorPos - 1);
+              {
+                var separatorAtLeftPos = this._findSeparatorAround(cursorPos - 1);
 
-              if (separatorAtLeftPos >= 0) {
-                var separatorAtLeftEndPos = separatorAtLeftPos + this.thousandsSeparator.length;
+                if (separatorAtLeftPos >= 0) {
+                  var separatorAtLeftEndPos = separatorAtLeftPos + this.thousandsSeparator.length;
 
-                if (cursorPos < separatorAtLeftEndPos || this.value.length <= separatorAtLeftEndPos || direction === DIRECTION.FORCE_LEFT) {
-                  return separatorAtLeftPos;
+                  if (cursorPos < separatorAtLeftEndPos || this.value.length <= separatorAtLeftEndPos || direction === DIRECTION.FORCE_LEFT) {
+                    return separatorAtLeftPos;
+                  }
                 }
-              }
 
-              break;
-            }
+                break;
+              }
 
             case DIRECTION.RIGHT:
             case DIRECTION.FORCE_RIGHT:
-            {
-              var separatorAtRightPos = this._findSeparatorAround(cursorPos);
+              {
+                var separatorAtRightPos = this._findSeparatorAround(cursorPos);
 
-              if (separatorAtRightPos >= 0) {
-                return separatorAtRightPos + this.thousandsSeparator.length;
+                if (separatorAtRightPos >= 0) {
+                  return separatorAtRightPos + this.thousandsSeparator.length;
+                }
               }
-            }
           }
 
           return cursorPos;
@@ -3990,15 +3989,15 @@
       }, {
         key: 'doValidate',
         value: function doValidate(flags) {
-          var regexp = flags.input ? this._numberRegExpInput : this._numberRegExp; 
+          var regexp = flags.input ? this._numberRegExpInput : this._numberRegExp;
 
           var valid = regexp.test(this._removeThousandsSeparators(this.value));
 
           if (valid) {
             var number = this.number;
-            valid = valid && !isNaN(number) && ( 
-              this.min == null || this.min >= 0 || this.min <= this.number) && ( 
-              this.max == null || this.max <= 0 || this.number <= this.max);
+            valid = valid && !isNaN(number) && (
+              this.min == null || this.min >= 0 || this.min <= this.number) && (
+                this.max == null || this.max <= 0 || this.number <= this.max);
           }
 
           return valid && _get(_getPrototypeOf(MaskedNumber.prototype), 'doValidate', this).call(this, flags);
@@ -4009,7 +4008,7 @@
         value: function doCommit() {
           if (this.value) {
             var number = this.number;
-            var validnum = number; 
+            var validnum = number;
 
             if (this.min != null) {
               validnum = Math.max(validnum, this.min);
@@ -4036,23 +4035,23 @@
       }, {
         key: '_normalizeZeros',
         value: function _normalizeZeros(value) {
-          var parts = this._removeThousandsSeparators(value).split(this.radix); 
+          var parts = this._removeThousandsSeparators(value).split(this.radix);
 
 
           parts[0] = parts[0].replace(/^(\D*)(0*)(\d*)/, function (match, sign, zeros, num) {
             return sign + num;
-          }); 
+          });
 
           if (value.length && !/\d$/.test(parts[0])) {
             parts[0] = parts[0] + '0';
           }
 
           if (parts.length > 1) {
-            parts[1] = parts[1].replace(/0*$/, ''); 
+            parts[1] = parts[1].replace(/0*$/, '');
 
             if (!parts[1].length) {
               parts.length = 1;
-            } 
+            }
           }
 
           return this._insertThousandsSeparators(parts.join(this.radix));
@@ -4117,7 +4116,7 @@
     normalizeZeros: true,
     padFractionalZeros: false
   };
-  IMask.MaskedNumber = MaskedNumber;
+  iMask.MaskedNumber = MaskedNumber;
 
 
   var MaskedFunction =
@@ -4144,7 +4143,7 @@
 
       return MaskedFunction;
     }(Masked);
-  IMask.MaskedFunction = MaskedFunction;
+  iMask.MaskedFunction = MaskedFunction;
 
   var MaskedDynamic =
     function (_Masked) {
@@ -4196,18 +4195,18 @@
           var flags = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
           var prevValueBeforeTail = flags.tail && flags._beforeTailState != null ? flags._beforeTailState._value : this.value;
           var inputValue = this.rawInputValue;
-          var insertValue = flags.tail && flags._beforeTailState != null ? 
+          var insertValue = flags.tail && flags._beforeTailState != null ?
             flags._beforeTailState._rawInputValue : inputValue;
           var tailValue = inputValue.slice(insertValue.length);
           var prevMask = this.currentMask;
           var details = new ChangeDetails();
-          var prevMaskState = prevMask && prevMask.state; 
+          var prevMaskState = prevMask && prevMask.state;
 
-          this.currentMask = this.doDispatch(appended, Object.assign({}, flags)); 
+          this.currentMask = this.doDispatch(appended, Object.assign({}, flags));
 
           if (this.currentMask) {
             if (this.currentMask !== prevMask) {
-              this.currentMask.reset(); 
+              this.currentMask.reset();
 
               var d = this.currentMask.append(insertValue, {
                 raw: true
@@ -4278,7 +4277,7 @@
           if (this.currentMask) {
             var _this$currentMask3;
 
-            details.aggregate((_this$currentMask3 = this.currentMask).remove.apply(_this$currentMask3, arguments)) 
+            details.aggregate((_this$currentMask3 = this.currentMask).remove.apply(_this$currentMask3, arguments))
               .aggregate(this._applyDispatch());
           }
 
@@ -4349,9 +4348,9 @@
         key: 'typedValue',
         get: function get() {
           return this.currentMask ? this.currentMask.typedValue : '';
-        }, 
+        },
         set: function set(value) {
-          var unmaskedValue = String(value); 
+          var unmaskedValue = String(value);
 
           if (this.currentMask) {
             this.currentMask.typedValue = value;
@@ -4412,7 +4411,7 @@
       if (!masked.compiledMasks.length) {
         return;
       }
-      var inputValue = masked.rawInputValue; 
+      var inputValue = masked.rawInputValue;
 
       var inputs = masked.compiledMasks.map(function (m, index) {
         m.reset();
@@ -4425,7 +4424,7 @@
           weight: weight,
           index: index
         };
-      }); 
+      });
 
       inputs.sort(function (i1, i2) {
         return i2.weight - i1.weight;
@@ -4433,7 +4432,7 @@
       return masked.compiledMasks[inputs[0].index];
     }
   };
-  IMask.MaskedDynamic = MaskedDynamic;
+  iMask.MaskedDynamic = MaskedDynamic;
 
 
   var PIPE_TYPE = {
@@ -4461,12 +4460,12 @@
 
     return createPipe.apply(void 0, pipeArgs)(value);
   }
-  IMask.PIPE_TYPE = PIPE_TYPE;
-  IMask.createPipe = createPipe;
-  IMask.pipe = pipe;
+  iMask.PIPE_TYPE = PIPE_TYPE;
+  iMask.createPipe = createPipe;
+  iMask.pipe = pipe;
 
   try {
-    globalThis.IMask = IMask;
+    globalThis.iMask = iMask;
   } catch (e) { }
 
   exports.HTMLContenteditableMaskElement = HTMLContenteditableMaskElement;
@@ -4485,9 +4484,12 @@
   exports.PIPE_TYPE = PIPE_TYPE;
   exports.createMask = createMask;
   exports.createPipe = createPipe;
-  exports.default = IMask;
+  exports.default = iMask;
   exports.pipe = pipe;
 
-  Object.defineProperty(exports, '__esModule', {value: true});
+  Object.defineProperty(exports, '__esModule', { value: true });
 
+  window.iMask = {
+    setiMask: iMask,
+  }
 })));

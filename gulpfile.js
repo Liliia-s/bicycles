@@ -16,6 +16,7 @@ var clean = require('del');
 var pipeline = require('readable-stream').pipeline;
 var jsmerge = require('gulp-concat');
 var jsclear = require('gulp-strip-comments');
+var jsmin = require('gulp-uglify');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -67,7 +68,8 @@ gulp.task('sprite', function () {
 gulp.task('js', function () {
   return pipeline(
       gulp.src(['source/js/*.js', '!source/js/main.js']),
-      jsmerge('vendor.js'),
+      jsmerge('vendor.min.js'),
+      jsmin(),
       gulp.dest('build/js')
   );
 });
