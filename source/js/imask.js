@@ -4490,6 +4490,6 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
   window.iMask = {
-    setiMask: iMask,
+    phone: iMask,
   }
 })));

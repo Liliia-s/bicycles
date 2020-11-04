@@ -1044,21 +1044,3 @@ html {
   @media (max-width: 767px) {
     .site-footer__icon--tel {
       left: -11px; } }
-
-@media (max-width: 320px) {
-  body {
-    background: url("../img/mobile.jpg") no-repeat;
-    min-height: 3954px;
-    opacity: 0.2; } }
-
-@media (min-width: 768px) and (max-width: 768px) {
-  body {
-    background: url("../img/tablet.jpg") no-repeat;
-    min-height: 3440px;
-    opacity: 0.2; } }
-
-@media (min-width: 1440px) {
-  body {
-    background: url("../img/desktop.jpg") no-repeat;
-    min-height: 4172px;
-    opacity: 0.2; } }
