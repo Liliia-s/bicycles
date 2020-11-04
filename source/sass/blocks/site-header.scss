@@ -1,5 +1,5 @@
 .site-header {
-  background: url("../../img/background-bike-desktop.png") no-repeat $color-black 50% 50%;
+  background: url("../img/background-bike-desktop.png") no-repeat $color-black 50% 50%;
   background-size: cover;
 
   @media (max-width: $tablet-max-width) {
@@ -37,6 +37,7 @@
 
 .site-header__logo-wrapper a {
   padding-top: 20px;
+  cursor: default;
 }
 
 .site-header__btn-menu {
@@ -49,10 +50,10 @@
 
   &--open {
     display: block;
-    background: url("../../img/icon-menu-open.svg") no-repeat $color-mint 50% 50%;
+    background: url("../img/icon-menu-open.svg") no-repeat $color-mint 50% 50%;
   }
 
   &--close {
-    background: url("../../img/icon-menu-close.svg") no-repeat transparent 50% 50%;
+    background: url("../img/icon-menu-close.svg") no-repeat transparent 50% 50%;
   }
 }

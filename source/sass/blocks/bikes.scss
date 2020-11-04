@@ -62,11 +62,19 @@
     padding-right: 49px;
 
     @media (max-width: $desktop-max-width-2) {
-      padding-right: 20px;
+      padding-right: 0;
     }
 
-    @media (max-width: $mobile-max-width) {
-      padding-right: 0;
+    &:not(:nth-child(2n)) {
+      @media (min-width: $tablet-width) {
+        padding-right: 50px;
+      }
+    }
+  }
+
+  &:nth-child(2n) {
+    @media (min-width: 1038px) {
+      padding-right: 50px;
     }
   }
 
@@ -79,7 +87,7 @@
 .bikes__item {
   &--road::after,
   &--kid::after {
-    background: url("../../img/icon-ellipse.svg") no-repeat;
+    background: url("../img/icon-ellipse.svg") no-repeat;
     background-size: cover;
   }
 
@@ -93,7 +101,7 @@
     @media (max-width: $desktop-max-width-2) {
       top: auto;
       bottom: 76px;
-      left: -42px;
+      left: -37px;
       width: 127px;
       height: 127px;
     }
@@ -110,7 +118,7 @@
       &::after {
         width: 47px;
         height: 47px;
-        background: url("../../img/icon-rectangle.svg") no-repeat;
+        background: url("../img/icon-rectangle.svg") no-repeat;
       }
 
       &::before {

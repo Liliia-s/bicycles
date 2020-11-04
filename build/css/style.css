@@ -189,11 +189,6 @@ body {
   letter-spacing: -0.5px;
   color: #000000;
   background-color: #ffffff; }
-  @media (min-width: 1024px) {
-    body {
-      border: 1px solid #000000;
-      -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); } }
 
 img {
   display: block;
@@ -268,7 +263,7 @@ html {
       padding: 0 15px; } }
 
 .site-header {
-  background: url("../../img/background-bike-desktop.png") no-repeat #000000 50% 50%;
+  background: url("../img/background-bike-desktop.png") no-repeat #000000 50% 50%;
   background-size: cover; }
   @media (max-width: 1023px) {
     .site-header {
@@ -302,7 +297,8 @@ html {
       padding-bottom: 37px; } }
 
 .site-header__logo-wrapper a {
-  padding-top: 20px; }
+  padding-top: 20px;
+  cursor: default; }
 
 .site-header__btn-menu {
   display: none;
@@ -313,9 +309,9 @@ html {
   z-index: 100; }
   .site-header__btn-menu--open {
     display: block;
-    background: url("../../img/icon-menu-open.svg") no-repeat #0ad9c6 50% 50%; }
+    background: url("../img/icon-menu-open.svg") no-repeat #0ad9c6 50% 50%; }
   .site-header__btn-menu--close {
-    background: url("../../img/icon-menu-close.svg") no-repeat transparent 50% 50%; }
+    background: url("../img/icon-menu-close.svg") no-repeat transparent 50% 50%; }
 
 .site-menu {
   padding-top: 21px;
@@ -402,7 +398,7 @@ html {
         right: 16px;
         width: 25px;
         height: 25px;
-        background: url("../../img/arrow-right.svg") no-repeat; } }
+        background: url("../img/arrow-right.svg") no-repeat; } }
 
 .promo {
   display: -webkit-box;
@@ -434,7 +430,7 @@ html {
       padding-right: 121px;
       padding-bottom: 80px;
       padding-left: 121px;
-      background: url("../../img/background-bike-tablet.png") no-repeat #000000 50% 50%;
+      background: url("../img/background-bike-tablet.png") no-repeat #000000 50% 50%;
       background-size: cover; } }
   @media (max-width: 767px) {
     .promo__wrapper {
@@ -442,7 +438,7 @@ html {
       padding-right: 16px;
       padding-bottom: 69px;
       padding-left: 16px;
-      background: url("../../img/background-bike-mobile.png") no-repeat #000000 50% 50%;
+      background: url("../img/background-bike-mobile.png") no-repeat #000000 50% 50%;
       background-size: cover; } }
   @media (max-width: 1023px) {
     .promo__wrapper--indents {
@@ -457,6 +453,9 @@ html {
   @media (max-width: 1023px) {
     .promo__wrapper-logo {
       display: none; } }
+
+.promo__logo {
+  cursor: default; }
 
 .promo__wrapper h1 {
   margin: 0;
@@ -620,9 +619,9 @@ html {
           justify-content: space-between; }
   @media (max-width: 1439px) {
     .about ul {
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; } }
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly; } }
   @media (max-width: 767px) {
     .about ul {
       -webkit-box-orient: vertical;
@@ -640,17 +639,10 @@ html {
   font-size: 22px;
   line-height: 34px;
   text-align: center; }
-  @media (max-width: 1439px) {
-    .about__list li {
-      margin-right: 10px; } }
-  @media (max-width: 1023px) {
-    .about__list li {
-      margin-right: 10px; } }
   @media (max-width: 767px) {
     .about__list li {
       max-width: 100%;
       font-size: 18px;
-      margin-right: 0;
       padding-bottom: 37px; } }
   .about__list li::before {
     position: absolute;
@@ -737,10 +729,13 @@ html {
     padding-right: 49px; }
     @media (max-width: 1439px) {
       .bikes__list li:not(:last-child) {
-        padding-right: 20px; } }
-    @media (max-width: 767px) {
-      .bikes__list li:not(:last-child) {
         padding-right: 0; } }
+    @media (min-width: 768px) {
+      .bikes__list li:not(:last-child):not(:nth-child(2n)) {
+        padding-right: 50px; } }
+  @media (min-width: 1038px) {
+    .bikes__list li:nth-child(2n) {
+      padding-right: 50px; } }
   @media (max-width: 767px) {
     .bikes__list li {
       -ms-flex-item-align: center;
@@ -748,7 +743,7 @@ html {
       padding-bottom: 42px; } }
 
 .bikes__item--road::after, .bikes__item--kid::after {
-  background: url("../../img/icon-ellipse.svg") no-repeat;
+  background: url("../img/icon-ellipse.svg") no-repeat;
   background-size: cover; }
 
 .bikes__item--road::after {
@@ -761,7 +756,7 @@ html {
     .bikes__item--road::after {
       top: auto;
       bottom: 76px;
-      left: -42px;
+      left: -37px;
       width: 127px;
       height: 127px; } }
   @media (max-width: 767px) {
@@ -773,7 +768,7 @@ html {
   .bikes__item--mountain::before, .bikes__item--mountain::after {
     width: 47px;
     height: 47px;
-    background: url("../../img/icon-rectangle.svg") no-repeat; }
+    background: url("../img/icon-rectangle.svg") no-repeat; }
   .bikes__item--mountain::before {
     top: 21px;
     left: -19px; }
@@ -823,7 +818,8 @@ html {
 .video__description-wrapper {
   padding-top: 121px;
   padding-bottom: 480px;
-  background-color: #131314; }
+  background-color: #131314;
+  letter-spacing: 0; }
   @media (max-width: 1023px) {
     .video__description-wrapper {
       padding-top: 64px;
@@ -836,6 +832,9 @@ html {
 .video__description-wrapper h2 {
   padding-bottom: 19px;
   color: #ffffff; }
+  @media (max-width: 767px) {
+    .video__description-wrapper h2 {
+      text-align: left; } }
   @media (max-width: 1023px) {
     .video__description-wrapper h2 {
       padding-bottom: 15px; } }
@@ -872,7 +871,7 @@ html {
   width: 65px;
   height: 65px;
   margin: auto;
-  background: url("../../img/icon-play.svg") no-repeat;
+  background: url("../img/icon-play.svg") no-repeat;
   background-size: cover;
   border: 0;
   -webkit-transform: translate(-50%, -50%);
@@ -907,10 +906,12 @@ html {
       padding-top: 25px;
       padding-bottom: 30px; } }
 
-@media (min-width: 768px) {
-  .site-footer__description-wrapper {
-    margin: 0;
-    padding: 0; } }
+.site-footer__description-wrapper {
+  letter-spacing: 0; }
+  @media (min-width: 768px) {
+    .site-footer__description-wrapper {
+      margin: 0;
+      padding: 0; } }
 
 .site-footer__description-wrapper h2 {
   padding-bottom: 30px; }
@@ -1043,3 +1044,21 @@ html {
   @media (max-width: 767px) {
     .site-footer__icon--tel {
       left: -11px; } }
+
+@media (max-width: 320px) {
+  body {
+    background: url("../img/mobile.jpg") no-repeat;
+    min-height: 3954px;
+    opacity: 0.2; } }
+
+@media (min-width: 768px) and (max-width: 768px) {
+  body {
+    background: url("../img/tablet.jpg") no-repeat;
+    min-height: 3440px;
+    opacity: 0.2; } }
+
+@media (min-width: 1440px) {
+  body {
+    background: url("../img/desktop.jpg") no-repeat;
+    min-height: 4172px;
+    opacity: 0.2; } }

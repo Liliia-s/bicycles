@@ -10,6 +10,7 @@
   padding-top: 121px;
   padding-bottom: 480px;
   background-color: $color-black-2;
+  letter-spacing: 0;
 
   @media (max-width: $tablet-max-width) {
     padding-top: 64px;
@@ -25,6 +26,10 @@
 .video__description-wrapper h2 {
   padding-bottom: 19px;
   color: $color-white;
+
+  @media (max-width: $mobile-max-width) {
+    text-align: left;
+  }
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 15px;
@@ -69,7 +74,7 @@
   width: 65px;
   height: 65px;
   margin: auto;
-  background: url("../../img/icon-play.svg") no-repeat;
+  background: url("../img/icon-play.svg") no-repeat;
   background-size: cover;
   border: 0;
   transform: translate(-50%, -50%);

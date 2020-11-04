@@ -31,7 +31,7 @@
   justify-content: space-between;
 
   @media (max-width: $desktop-max-width-2) {
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -49,18 +49,9 @@
   line-height: 34px;
   text-align: center;
 
-  @media (max-width: $desktop-max-width-2) {
-    margin-right: 10px;
-  }
-
-  @media (max-width: $tablet-max-width) {
-    margin-right: 10px;
-  }
-
   @media (max-width: $mobile-max-width) {
     max-width: 100%;
     font-size: 18px;
-    margin-right: 0;
     padding-bottom: 37px;
   }
 

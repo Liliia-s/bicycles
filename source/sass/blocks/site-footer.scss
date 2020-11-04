@@ -17,6 +17,8 @@
 }
 
 .site-footer__description-wrapper {
+  letter-spacing: 0;
+
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 0;
