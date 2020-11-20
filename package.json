@@ -67,6 +67,6 @@
     "imask.js"
   ],
   "engines": {
-    "node": "8.16"
+    "node": "^8 || ^10"
   }
 }
